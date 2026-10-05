@@ -1,22 +1,35 @@
-# Yuuki | ZEN大学生・ソフトウェアエンジニア (Simple Web & Link Hub)
+# Yuuki | ポートフォリオ（ZEN大学生・ソフトウェアエンジニア）
 
-**ZEN大学（知能情報社会学部）**に在籍するソフトウェアエンジニア・Yuukiの、シンプルで洗練されたWebページ兼リンク集です。  
-過剰な装飾やAI生成テンプレ特有のギミックを排し、人間の手触り（Tactile UI）と明快なタイポグラフィに基づいたピュアな HTML / CSS / JS 構成です。
+**ZEN大学（知能情報社会学部）**に在籍するソフトウェアエンジニア・Yuukiの公式ポートフォリオサイトです。  
+単なるリンク集や作品カタログではなく、ポートフォリオの本質である**「課題発見（Why）→ 技術設計（How）→ 技術的挑戦と工夫（Craftsmanship）」**という思考プロセスを明確に可視化しています。
 
 ---
 
-## 🌟 構成と特徴
+## 🌟 ポートフォリオの構成
 
-- **シンプル & ミニマル構成**:
-  - プロダクト一覧や問い合わせフォーム等を省き、プロフィール・ZEN大学での学修・公式リンク（GitHub, X, Zenn, 推しサポWeb）に絞った明快な1ページ。
-- **ZEN大学生としての明記**:
-  - 日本初の本格的オンライン大学「ZEN大学（知能情報社会学部）」での学問的探究（数理・情報基盤・社会ネットワーク）と日々の開発姿勢を明記。
-- **2026年 Human-Centric Design**:
-  - 押し心地のある物理的ボタン（Tactile UI）、ストーン調とディープオブシディアンの2軸カラー。
-  - ダーク / ライトテーマ切替対応（LocalStorage自動保存）。
-  - ワンクリックURLコピー & トースト通知、Web Share API共有対応。
-- **完全ピュア実装（Zero Dependencies）**:
-  - ビルドツール不要。ブラウザで `index.html` を直接開くだけで即座に動作します。
+1. **自己紹介・背景（Who I am）**:
+   - ZEN大学（知能情報社会学部）在籍の学生エンジニアとしてのアイデンティティと活動方針。
+2. **代表制作物のケーススタディ（Case Study）**:
+   - 代表作『推しサポ (Oshiss Web)』におけるローカルファースト（IndexedDB）設計、WebRTC暗号化P2P通信による端末間直接同期、PWA技術選定の根拠と思考プロセス。
+   - サブプロジェクト（macOS Native Suite, C Text Editor, DevBrowser）のアーキテクチャ要約。
+3. **ZEN大学での学修と探究（Academic Foundation）**:
+   - 大学での数理・情報基盤・社会ネットワークの学びと、自律的なソフトウェア開発の往復・相乗効果。
+4. **技術スタック（Technical Competencies）**:
+   - Frontend（TypeScript/React/PWA/IndexedDB）、macOS Native（Swift/AppKit/HIG）、Systems & AI（C99/Python/Local LLM）の対応領域。
+5. **活動の記録・公式リンク（Proofs & Repositories）**:
+   - GitHub、X（旧Twitter）、Zenn/Qiitaへのダイレクトリンク（ワンクリックURLコピー付き）。
+   - ※問い合わせ先（フォームやメール）は設置していません。
+
+---
+
+## 🎨 2026年デザインとピュア実装
+
+- **Human-Centric & Strategic Restraint**:
+  - 不要なAI生成風の派手なネオンや発光演出を排し、端正な建築的グリッドと押下感（Tactile Feedback）のあるボタンを採用。
+- **Zero Dependencies / No Build Step**:
+  - ピュアな HTML5 / CSS3 / ES6+ のみで構成。Node.jsやViteなどのビルドツール不要で、ブラウザで `index.html` を開くだけで即座に動作します。
+- **ダーク / ライトテーマ対応**:
+  - システム設定や手動切替に対応し、LocalStorageへ状態を自動保存。
 
 ---
 
@@ -24,16 +37,16 @@
 
 ```text
 My_portfoliosite/
-├── index.html        # ページの骨格（プロフィール・ZEN大学での学び・リンク一覧）
+├── index.html        # ポートフォリオ骨格（ケーススタディ・ZEN大学学修・リンク）
 ├── css/
-│   └── style.css     # 2026年エディトリアル・触覚デザイン・ダーク/ライトテーマ
+│   └── style.css     # 2026年エディトリアル・触覚デザイン・ダークテーマCSS
 ├── js/
-│   └── script.js     # テーマ切替・URLコピー・サイト共有処理
-└── README.md         # 説明書
+│   └── script.js     # テーマ切替・URLコピー・スクロール追従・共有処理
+└── README.md         # プロジェクト説明書
 ```
 
 ---
 
-## 🚀 使い方
+## 🚀 閲覧方法
 
-ブラウザで [`index.html`](file:///Users/yuuki/dev/My_portfoliosite/index.html) を直接ダブルクリックして開くだけでご利用いただけます。
+ブラウザで [`index.html`](file:///Users/yuuki/dev/My_portfoliosite/index.html) を直接ダブルクリックして開くだけでご確認いただけます。

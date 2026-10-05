@@ -1,11 +1,12 @@
 /**
- * Yuuki - Simple Web Page & Link Hub
+ * Yuuki - Portfolio & Link Hub
  * Pure JavaScript
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initClipboardAndShare();
+  initScrollSpy();
 });
 
 /* ==========================================================================
@@ -92,8 +93,8 @@ function initClipboardAndShare() {
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
       const shareData = {
-        title: 'Yuuki | ZEN大学生・ソフトウェアエンジニア',
-        text: 'ZEN大学生・ソフトウェアエンジニアYuukiのWebページ兼リンク集です。',
+        title: 'Yuuki | ポートフォリオ（ZEN大学生・ソフトウェアエンジニア）',
+        text: 'ZEN大学生・ソフトウェアエンジニアYuukiの公式ポートフォリオです。',
         url: window.location.href
       };
 
@@ -101,7 +102,7 @@ function initClipboardAndShare() {
         try {
           await navigator.share(shareData);
         } catch {
-          // User dismissed share dialog
+          // User dismissed dialog
         }
       } else {
         navigator.clipboard.writeText(window.location.href).then(() => {
@@ -110,4 +111,35 @@ function initClipboardAndShare() {
       }
     });
   }
+}
+
+/* ==========================================================================
+   Navigation ScrollSpy
+   ========================================================================== */
+function initScrollSpy() {
+  const sections = ['about', 'casestudy', 'academic', 'skills', 'links'];
+  const navLinks = document.querySelectorAll('.nav-item');
+
+  window.addEventListener('scroll', () => {
+    const scrollPos = window.scrollY + 180;
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el) {
+        const top = el.offsetTop;
+        const height = el.offsetHeight;
+        if (scrollPos >= top && scrollPos < top + height) {
+          navLinks.forEach((link) => {
+            if (link.getAttribute('href') === `#${id}`) {
+              link.style.color = 'var(--text-main)';
+              link.style.fontWeight = '700';
+            } else {
+              link.style.color = 'var(--text-muted)';
+              link.style.fontWeight = '600';
+            }
+          });
+          break;
+        }
+      }
+    }
+  }, { passive: true });
 }
