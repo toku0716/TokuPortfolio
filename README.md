@@ -17,7 +17,7 @@ ZEN大学 知能情報社会学部 2年生・Tokuの公式ポートフォリオ�
 ## 📁 Structure
 
 ```text
-My_portfoliosite/
+TokuPortfolio/
 ├── index.html        # ポートフォリオ本体（Hero, About, Work, Link）
 ├── style.css         # エディトリアル・ダークグラススタイル
 ├── space-3d.js       # Three.js 白の深宇宙スターフィールドエンジン
