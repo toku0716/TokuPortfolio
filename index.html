@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuuki | ZEN大学生・ソフトウェアエンジニア (Portfolio & Links)</title>
-  <meta name="description" content="ZEN大学（知能情報社会学部）在籍のソフトウェアエンジニアYuukiのポートフォリオ兼リンク紹介サイト。推しサポ、macOSネイティブアプリ、低レイヤーC言語等の制作実績。">
+  <title>Yuuki | ZEN大学生・ソフトウェアエンジニア</title>
+  <meta name="description" content="ZEN大学（知能情報社会学部）在籍のソフトウェアエンジニアYuukiのシンプルWebページ兼リンク集。">
 
-  <!-- Favicon SVG (Minimal clean monogram) -->
+  <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m7 7 5 5-5 5'/><path d='M13 17h4'/></svg>">
 
   <!-- Stylesheet -->
@@ -20,22 +20,13 @@
   <!-- Header -->
   <header class="site-header">
     <div class="container header-inner">
-      <button class="brand-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})" aria-label="ページ先頭へ">
+      <div class="brand-area">
         <div class="brand-avatar">Y</div>
         <div class="brand-info">
           <span class="brand-name">Yuuki</span>
           <span class="brand-tag">ZEN UNIV. / DEV</span>
         </div>
-      </button>
-
-      <!-- Desktop Nav -->
-      <nav class="nav-links">
-        <a href="#links" class="nav-item active">リンク集</a>
-        <a href="#works" class="nav-item">制作実績</a>
-        <a href="#academic" class="nav-item">ZEN大学での学び</a>
-        <a href="#skills" class="nav-item">技術スタック</a>
-        <a href="#philosophy" class="nav-item">開発理念</a>
-      </nav>
+      </div>
 
       <!-- Controls -->
       <div class="header-actions">
@@ -53,797 +44,219 @@
     </div>
   </header>
 
-  <!-- Editorial Hero Section -->
-  <section class="hero-section">
+  <!-- Main Content -->
+  <main class="main-content">
     <div class="container-narrow">
-      <div class="hero-top-row">
-        <!-- ZEN University Official Affiliation Badge -->
-        <span class="zen-univ-badge">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-          ZEN大学 知能情報社会学部 在籍
-        </span>
 
-        <span class="status-pill">
-          <span class="status-indicator"></span>
-          STATUS: ACTIVE DEV
-        </span>
-      </div>
+      <!-- Hero Profile Section -->
+      <section class="hero-block">
+        <div class="hero-top-row">
+          <!-- ZEN University Official Affiliation Badge -->
+          <span class="zen-univ-badge">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+            ZEN大学 知能情報社会学部 在籍
+          </span>
 
-      <h1 class="hero-headline">
-        Yuuki <span style="font-weight:400; font-size:0.65em; color:var(--text-muted);">(ゆうき)</span>
-      </h1>
-      <p class="hero-subhead">
-        ZEN大学生 / ソフトウェアエンジニア
-      </p>
-
-      <!-- Academic Context Box -->
-      <div class="hero-academic-box">
-        <span class="academic-label">Academic Profile & Focus</span>
-        <p class="academic-text">
-          日本初の本格的オンライン大学<strong>「ZEN大学（知能情報社会学部）」</strong>に在籍中。
-          最先端の情報科学・数理・デジタル産業論を学びながら、時間や場所に縛られない学習環境を活かしてWebフロントエンド（React/TypeScript）、macOSネイティブ（Swift）、低レイヤーC言語などの実践的プロダクト開発に取り組んでいます。
-        </p>
-      </div>
-
-      <p class="hero-description">
-        「サーバーに依存しすぎず、手元の端末で心地よく安全に動く道具」を追求。
-        プライバシーを守るローカル完結型アーキテクチャと、手触り感のある直感的なUI設計を大切にしています。
-      </p>
-
-      <div class="hero-actions">
-        <a href="#links" class="btn btn-solid">
-          <span>公式リンク集</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-        <a href="#works" class="btn btn-outline">
-          <span>制作実績 (8作品)</span>
-        </a>
-        <a href="#contact" class="btn btn-outline">
-          <span>お問い合わせ</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Link Hub Section (リンク集 / Link in Bio) -->
-  <section id="links" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-wrap">
-          <span class="section-num">[ 01 / LINK HUB ]</span>
-          <h2 class="section-title">公式リンク・SNS</h2>
-          <p class="section-desc">Webアプリケーション、GitHub、技術記事、SNSへのアクセス一覧</p>
+          <span class="status-pill">
+            <span class="status-indicator"></span>
+            STATUS: ACTIVE
+          </span>
         </div>
 
-        <div class="filter-tabs">
-          <button class="filter-tab active" data-link-filter="all">すべて</button>
-          <button class="filter-tab" data-link-filter="app">制作アプリ</button>
-          <button class="filter-tab" data-link-filter="code">コード</button>
-          <button class="filter-tab" data-link-filter="social">SNS</button>
-          <button class="filter-tab" data-link-filter="writing">記事</button>
-        </div>
-      </div>
-
-      <div class="links-grid">
-        <!-- 1. Oshiss Web (Pinned) -->
-        <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer" class="link-item pinned" data-category="app">
-          <div class="link-info-side">
-            <div class="link-icon-container" style="color:var(--accent-rose);">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">推しサポ (Oshiss Web)</span>
-                <span class="link-tag">PINNED / WEB APP</span>
-              </div>
-              <p class="link-subtext">完全端末保存・WebRTC直接同期の推し活総合支援アプリ</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <button type="button" class="link-tool-btn copy-link-btn" data-url="https://toku0716.github.io/oshi_web/" data-title="推しサポ" title="URLをコピー">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- 2. GitHub -->
-        <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-item" data-category="code">
-          <div class="link-info-side">
-            <div class="link-icon-container">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">GitHub (@toku0716)</span>
-                <span class="link-tag">REPOSITORIES</span>
-              </div>
-              <p class="link-subtext">Swift、TypeScript、C言語等のソースコード</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <button type="button" class="link-tool-btn copy-link-btn" data-url="https://github.com/toku0716" data-title="GitHub" title="URLをコピー">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- 3. X (Twitter) -->
-        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-item" data-category="social">
-          <div class="link-info-side">
-            <div class="link-icon-container">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">X (旧Twitter)</span>
-                <span class="link-tag">SOCIAL</span>
-              </div>
-              <p class="link-subtext">ZEN大学での学びや開発進捗ログを発信</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <button type="button" class="link-tool-btn copy-link-btn" data-url="https://x.com" data-title="X (Twitter)" title="URLをコピー">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- 4. Zenn / Qiita -->
-        <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer" class="link-item" data-category="writing">
-          <div class="link-info-side">
-            <div class="link-icon-container">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">技術記事 (Zenn / Qiita)</span>
-                <span class="link-tag">ARTICLES</span>
-              </div>
-              <p class="link-subtext">Swift・TypeScript・ローカルAIの実践知見</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <button type="button" class="link-tool-btn copy-link-btn" data-url="https://zenn.dev" data-title="技術記事" title="URLをコピー">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- 5. Akushu Repo App -->
-        <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-item" data-category="app">
-          <div class="link-info-side">
-            <div class="link-icon-container" style="color:var(--accent-green);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">Akushu Repo App</span>
-                <span class="link-tag">APP</span>
-              </div>
-              <p class="link-subtext">握手会・ファンイベント会話ログ記録アプリ</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <button type="button" class="link-tool-btn copy-link-btn" data-url="https://github.com/toku0716" data-title="Akushu Repo" title="URLをコピー">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            </button>
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-            </div>
-          </div>
-        </a>
-
-        <!-- 6. Contact Direct -->
-        <a href="#contact" class="link-item" data-category="social">
-          <div class="link-info-side">
-            <div class="link-icon-container" style="color:var(--accent-warm);">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            </div>
-            <div class="link-content">
-              <div class="link-header-row">
-                <span class="link-heading">お問い合わせ / メール</span>
-                <span class="link-tag">CONTACT</span>
-              </div>
-              <p class="link-subtext">共同開発・技術的なご相談・フィードバック</p>
-            </div>
-          </div>
-          <div class="link-control-side">
-            <div class="link-tool-btn">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" x2="19" y1="12" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Works & Portfolio Section (制作実績) -->
-  <section id="works" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-wrap">
-          <span class="section-num">[ 02 / FEATURED WORKS ]</span>
-          <h2 class="section-title">制作物・プロダクト</h2>
-          <p class="section-desc">ZEN大学での知見と実践開発を結びつけたソフトウェア一覧</p>
-        </div>
-
-        <!-- Search -->
-        <div class="search-wrapper">
-          <svg class="search-icon-svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-          <input type="text" id="worksSearchInput" class="search-field" placeholder="キーワード・技術検索...">
-          <button id="worksSearchClear" class="search-reset-btn" style="display:none;">✕</button>
-        </div>
-      </div>
-
-      <!-- Category Filter Tabs -->
-      <div class="filter-tabs" style="margin-bottom: 1.25rem;">
-        <button class="filter-tab active" data-work-filter="all">すべて</button>
-        <button class="filter-tab" data-work-filter="web">Web & アプリ</button>
-        <button class="filter-tab" data-work-filter="macos">macOS Native</button>
-        <button class="filter-tab" data-work-filter="tool">開発ツール</button>
-        <button class="filter-tab" data-work-filter="ai">AI・対話</button>
-        <button class="filter-tab" data-work-filter="system">低レイヤー / C</button>
-      </div>
-
-      <!-- Bento Grid -->
-      <div class="works-grid">
-
-        <!-- 1. Oshiss -->
-        <div class="work-cell" data-project-id="oshiss" data-category="web">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#e11d48;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="work-tag-badge" style="color:var(--accent-rose);">FLAGSHIP</span>
-                <span class="mono-label">2026</span>
-              </div>
-            </div>
-            <h3 class="work-heading">推しサポ (Oshiss / Oshiss-Web)</h3>
-            <p class="work-summary">端末内完結・安心プライバシーの推し活総合支援アプリ</p>
-            <p class="work-paragraph">サーバー保存を排したIndexedDB完結設計。WebRTCによる6桁暗号化コード直接端末同期、PWA完全対応。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">React 19</span>
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">IndexedDB</span>
-              <span class="tech-chip">WebRTC</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716/oshi_web" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="GitHub">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-                <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer" class="icon-link-btn" title="Live Web App">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. macOS Suite -->
-        <div class="work-cell" data-project-id="macos-suite" data-category="macos">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#2563eb;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.5-8.58 3.91a2 2 0 0 1-1.66 0L2.6 12.5"/><path d="m22 17.5-8.58 3.91a2 2 0 0 1-1.66 0L2.6 17.5"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2025-2026</span>
-              </div>
-            </div>
-            <h3 class="work-heading">macOS Native Utility Suite</h3>
-            <p class="work-summary">Swiftによる軽量・高速・美しいデスクトップツール群</p>
-            <p class="work-paragraph">ZipVault暗号化保管庫、Task Manager、Finder機能拡張、Photo AppなどApple HIGに準拠したネイティブアプリ群。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">Swift 6</span>
-              <span class="tech-chip">SwiftUI</span>
-              <span class="tech-chip">AppKit</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. DevBrowser -->
-        <div class="work-cell" data-project-id="dev-browser" data-category="tool">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#0284c7;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2026</span>
-              </div>
-            </div>
-            <h3 class="work-heading">DevBrowser</h3>
-            <p class="work-summary">エンジニアの検証効率を最大化する特化型ブラウザ</p>
-            <p class="work-paragraph">複数画面（モバイル・デスクトップ）の同期プレビューとレスポンシブ検証に特化した開発者専用ブラウザ。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">Electron</span>
-              <span class="tech-chip">DevTools</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 4. C Text Editor -->
-        <div class="work-cell" data-project-id="c-text-editor" data-category="system">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#475569;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2025</span>
-              </div>
-            </div>
-            <h3 class="work-heading">C Text Editor & GUI</h3>
-            <p class="work-summary">低レイヤーメモリ管理とターミナルバッファの追求</p>
-            <p class="work-paragraph">外部ライブラリ非依存のC言語ピュア実装。VT100ターミナル制御とギャップバッファによる文字列編集。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">C99</span>
-              <span class="tech-chip">POSIX</span>
-              <span class="tech-chip">Terminal VT100</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. AITuber App -->
-        <div class="work-cell" data-project-id="aituber-app" data-category="ai">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#7c3aed;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2026</span>
-              </div>
-            </div>
-            <h3 class="work-heading">AITuber Interactive Engine</h3>
-            <p class="work-summary">リアルタイム対話＆感情連動型アバター</p>
-            <p class="work-paragraph">LLM応答、音声認識、リアルタイム音声合成と表情差分をWebSocketでシームレスに同期させた対話システム。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">Python</span>
-              <span class="tech-chip">LLM</span>
-              <span class="tech-chip">Speech AI</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Akushu Repo App -->
-        <div class="work-cell" data-project-id="akushu-repo-app" data-category="web">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#059669;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M13 8H7"/><path d="M17 12H7"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2025</span>
-              </div>
-            </div>
-            <h3 class="work-heading">Akushu Repo App</h3>
-            <p class="work-summary">ファンイベントの感動を逃さない会話ログ記録</p>
-            <p class="work-paragraph">握手会・トークイベント直後の記憶をチャット形式で即時記録・タイムライン保存できるファン専用アプリ。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">React</span>
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">Mobile UX</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. Ollama Dashboard -->
-        <div class="work-cell" data-project-id="ollama-dashboard" data-category="ai">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#4f46e5;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M15 2v2"/><path d="M15 20v2"/><path d="M2 15h2"/><path d="M2 9h2"/><path d="M20 15h2"/><path d="M20 9h2"/><path d="M9 2v2"/><path d="M9 20v2"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2026</span>
-              </div>
-            </div>
-            <h3 class="work-heading">Ollama Dashboard & Manager</h3>
-            <p class="work-summary">ローカルLLM運用のGUIコントロールパネル</p>
-            <p class="work-paragraph">ローカル実行LLMのモデル管理、パラメータ試行、トークン生成速度の可視化を一元化。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">React</span>
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">Local LLM</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. Kids Sound Play -->
-        <div class="work-cell" data-project-id="kids-sound-play" data-category="web">
-          <div>
-            <div class="work-cell-header">
-              <div class="work-symbol" style="background:#d97706;">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m10 8 6 4-6 4V8z"/></svg>
-              </div>
-              <div class="work-meta-right">
-                <span class="mono-label">2025</span>
-              </div>
-            </div>
-            <h3 class="work-heading">Kids Sound Play (知育サウンド)</h3>
-            <p class="work-summary">誤操作ゼロ設計の幼児向けサウンドアプリ</p>
-            <p class="work-paragraph">余計な広告や外部リンクを排除し、タップと音のフィードバックで安全に遊べる知育アプリ。</p>
-          </div>
-          <div class="work-cell-bottom">
-            <div class="work-tech-chips">
-              <span class="tech-chip">TypeScript</span>
-              <span class="tech-chip">Web Audio</span>
-              <span class="tech-chip">Safety UI</span>
-            </div>
-            <div class="work-action-row">
-              <span class="view-detail-link">詳細を見る →</span>
-              <div class="work-icon-links">
-                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="icon-link-btn">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- No Results -->
-      <div id="worksNoResults" style="display:none; text-align:center; padding: 3rem 1rem; border: 1px dashed var(--border-strong); border-radius: var(--radius-sm); margin-top: 1rem;">
-        <p style="font-size:0.85rem; color:var(--text-muted);">条件に一致する制作物が見つかりませんでした。</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Academic Focus Section (ZEN大学での学び) -->
-  <section id="academic" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-wrap">
-          <span class="section-num">[ 03 / ACADEMIC BACKGROUND ]</span>
-          <h2 class="section-title">ZEN大学での学びと探究</h2>
-          <p class="section-desc">学問としての情報科学と、現場でのプロダクト開発の相乗効果</p>
-        </div>
-      </div>
-
-      <div class="academic-spotlight">
-        <div class="spotlight-left">
-          <span class="mono-label">AFFILIATION</span>
-          <span class="spotlight-univ">ZEN大学</span>
-          <span class="spotlight-dept">知能情報社会学部</span>
-          <span class="mono-label" style="margin-top:0.5rem;">STATUS: ENROLLED</span>
-        </div>
-        <div class="spotlight-right">
-          <p>
-            ZEN大学は、ドワンゴと日本財団が提携して設立されたオンライン大学です。
-            単にAIやプログラミングを道具として使うだけでなく、「情報技術の仕組みを根本から理解し、人間社会の課題に対してどう使いこなすか」という本質的なリテラシーと数理・情報基盤を学修しています。
-          </p>
-          <p style="margin-top:0.6rem;">
-            オンライン学習の柔軟性を活かし、大学で得た分散システム・データ構造・暗号化・情報倫理の学術的基礎を、日々のWebアプリ（推しサポのP2P通信）やmacOSネイティブ開発へ直接還元・検証しています。
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Skills Matrix Section (技術スタック) -->
-  <section id="skills" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-wrap">
-          <span class="section-num">[ 04 / TECHNICAL MATRIX ]</span>
-          <h2 class="section-title">技術スタック & 領域</h2>
-          <p class="section-desc">用途や制約に応じて最適な言語・フレームワークを選択</p>
-        </div>
-      </div>
-
-      <div class="skills-layout">
-        <!-- 1. Frontend -->
-        <div class="skill-box">
-          <div class="skill-box-header">
-            <span class="skill-category-name">Frontend & Web</span>
-            <span class="mono-label">6 ITEMS</span>
-          </div>
-          <div class="skill-rows">
-            <div class="skill-row-item">
-              <span class="skill-title-text">TypeScript</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">React 19 / Next.js</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Tailwind CSS</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Vite / PWA</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">IndexedDB (Local Storage)</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">WebRTC (Peer-to-Peer)</span>
-              <span class="skill-status-tag">Intermediate</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 2. macOS & Native -->
-        <div class="skill-box">
-          <div class="skill-box-header">
-            <span class="skill-category-name">macOS & Native</span>
-            <span class="mono-label">4 ITEMS</span>
-          </div>
-          <div class="skill-rows">
-            <div class="skill-row-item">
-              <span class="skill-title-text">Swift 6</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">SwiftUI & Combine</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">AppKit / macOS SDK</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Apple HIG (Design)</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- 3. Systems & AI -->
-        <div class="skill-box">
-          <div class="skill-box-header">
-            <span class="skill-category-name">Systems, AI & Logic</span>
-            <span class="mono-label">4 ITEMS</span>
-          </div>
-          <div class="skill-rows">
-            <div class="skill-row-item">
-              <span class="skill-title-text">C99 (POSIX / Memory)</span>
-              <span class="skill-status-tag">Intermediate</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Python (LLM / Voice)</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Local LLM (Ollama)</span>
-              <span class="skill-status-tag">Proficient</span>
-            </div>
-            <div class="skill-row-item">
-              <span class="skill-title-text">Git / CI / Architecture</span>
-              <span class="skill-status-tag">Advanced</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Philosophy & Principles Section (開発理念) -->
-  <section id="philosophy" class="section">
-    <div class="container">
-      <div class="section-head">
-        <div class="section-title-wrap">
-          <span class="section-num">[ 05 / CRAFTSMANSHIP ]</span>
-          <h2 class="section-title">ものづくりの指針</h2>
-          <p class="section-desc">派手なギミックよりも、長く信頼して使える道具としての価値を重視</p>
-        </div>
-      </div>
-
-      <div class="philosophy-grid">
-        <!-- 1 -->
-        <div class="philosophy-card">
-          <div class="philosophy-top">
-            <span class="principle-tag">PRINCIPLE 01</span>
-            <h3 class="philosophy-heading">プライバシー・バイ・デザイン</h3>
-            <p class="philosophy-body">
-              個人の大切なデータや趣味のログを安易に外部サーバーへ預けず、ユーザー自身の端末内に留める「ローカル完結型」の設計を最優先にします。
-            </p>
-          </div>
-          <span class="mono-label" style="margin-top:1.5rem;">LOCAL-FIRST STORAGE</span>
-        </div>
-
-        <!-- 2 -->
-        <div class="philosophy-card">
-          <div class="philosophy-top">
-            <span class="principle-tag">PRINCIPLE 02</span>
-            <h3 class="philosophy-heading">無駄のない手触りとレスポンス</h3>
-            <p class="philosophy-body">
-              過剰な重いフレームワークに頼りすぎず、必要な機能だけを丁寧に研ぎ澄ます。触れた瞬間に遅延なく反応する、心地よい操作体験を実装します。
-            </p>
-          </div>
-          <span class="mono-label" style="margin-top:1.5rem;">TACTILE & ZERO LATENCY</span>
-        </div>
-
-        <!-- 3 -->
-        <div class="philosophy-card">
-          <div class="philosophy-top">
-            <span class="principle-tag">PRINCIPLE 03</span>
-            <h3 class="philosophy-heading">理論と実装の往復</h3>
-            <p class="philosophy-body">
-              ZEN大学で学ぶ数理・情報基盤の理論と、実際にエンドユーザーが使うソフトウェア実装を常に往復しながら、地に足の着いた開発を続けます。
-            </p>
-          </div>
-          <span class="mono-label" style="margin-top:1.5rem;">THEORY & PRACTICE</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section (お問い合わせ) -->
-  <section id="contact" class="section">
-    <div class="container-narrow">
-      <div class="contact-box">
-        <span class="mono-label" style="color:var(--accent-green);">● OPEN FOR CONTACT</span>
-        <h2 class="contact-title" style="margin-top:0.35rem;">ご連絡・お問い合わせ</h2>
-        <p class="contact-subtitle">
-          共同開発のお誘い、技術的な情報交換、制作物へのフィードバックなど、お気軽にお送りください。
+        <h1 class="hero-headline">
+          Yuuki <span class="hero-name-faint">(ゆうき)</span>
+        </h1>
+        <p class="hero-subhead">
+          ZEN大学生 / ソフトウェアエンジニア
         </p>
 
-        <div class="contact-actions">
-          <a href="mailto:contact@example.com" class="btn btn-solid">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" x2="11" y1="2" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            <span>メールを送信</span>
+        <p class="hero-lead">
+          <strong>ZEN大学（知能情報社会学部）</strong>に在籍しながら、実践的なソフトウェア開発と情報科学の探究を行っている学生エンジニアです。
+        </p>
+
+        <p class="hero-description">
+          Webフロントエンド（TypeScript/React）やmacOSネイティブアプリ（Swift）、低レイヤーC言語、ローカルAI連携など、幅広い技術レイヤーに興味を持って日々コードを書いています。
+          過剰な装飾や不要な外部依存を排し、使う人の端末内で心地よく動く道具づくりを大切にしています。
+        </p>
+      </section>
+
+      <!-- Academic Background & Study Focus -->
+      <section class="content-block">
+        <div class="block-header">
+          <span class="mono-label">[ ACADEMIC FOCUS ]</span>
+          <h2 class="block-title">ZEN大学での学び</h2>
+        </div>
+
+        <div class="academic-card">
+          <div class="academic-header">
+            <span class="academic-univ">ZEN大学</span>
+            <span class="academic-dept">知能情報社会学部 知能情報社会学科</span>
+          </div>
+          <p class="academic-body">
+            日本初の本格的オンライン大学であるZEN大学にて、数理・情報基盤・社会ネットワーク・デジタル産業論を幅広く履修。
+            最先端のIT技術を単に利用するだけでなく、情報技術の構造を根本から捉え、実社会や個人の課題を解決するための実践力と思考力を養っています。
+          </p>
+          <div class="academic-topics">
+            <span class="topic-chip">情報科学・数理</span>
+            <span class="topic-chip">分散システム & P2P</span>
+            <span class="topic-chip">プライバシー設計</span>
+            <span class="topic-chip">デジタル産業論</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Link Hub Section (公式リンク集) -->
+      <section class="content-block">
+        <div class="block-header">
+          <span class="mono-label">[ OFFICIAL LINKS ]</span>
+          <h2 class="block-title">リンク・発信</h2>
+          <p class="block-desc">コードリポジトリ、技術記事、SNSなどの各種リンクです。</p>
+        </div>
+
+        <div class="links-list">
+
+          <!-- 1. GitHub -->
+          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-row">
+            <div class="link-left">
+              <div class="link-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </div>
+              <div class="link-texts">
+                <div class="link-title-line">
+                  <span class="link-name">GitHub</span>
+                  <span class="link-badge">CODE</span>
+                </div>
+                <p class="link-detail">@toku0716 / 各種開発リポジトリとソースコード</p>
+              </div>
+            </div>
+            <div class="link-right">
+              <button type="button" class="copy-btn copy-link-btn" data-url="https://github.com/toku0716" data-title="GitHub" title="URLをコピー">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+              <div class="arrow-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
           </a>
-          <button id="copyEmailBtn" class="btn btn-outline" data-email="contact@example.com">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-            <span>アドレスをコピー</span>
-          </button>
+
+          <!-- 2. X (Twitter) -->
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-row">
+            <div class="link-left">
+              <div class="link-icon-box">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </div>
+              <div class="link-texts">
+                <div class="link-title-line">
+                  <span class="link-name">X (旧Twitter)</span>
+                  <span class="link-badge">SOCIAL</span>
+                </div>
+                <p class="link-detail">ZEN大学での学びや日々の開発ログを発信中</p>
+              </div>
+            </div>
+            <div class="link-right">
+              <button type="button" class="copy-btn copy-link-btn" data-url="https://x.com" data-title="X" title="URLをコピー">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+              <div class="arrow-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 3. Zenn / Qiita -->
+          <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer" class="link-row">
+            <div class="link-left">
+              <div class="link-icon-box">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+              </div>
+              <div class="link-texts">
+                <div class="link-title-line">
+                  <span class="link-name">技術記事 (Zenn / Qiita)</span>
+                  <span class="link-badge">WRITING</span>
+                </div>
+                <p class="link-detail">TypeScript・Swift・C言語の実装知見や技術メモ</p>
+              </div>
+            </div>
+            <div class="link-right">
+              <button type="button" class="copy-btn copy-link-btn" data-url="https://zenn.dev" data-title="技術記事" title="URLをコピー">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+              <div class="arrow-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- 4. Oshiss Web (App Link) -->
+          <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer" class="link-row">
+            <div class="link-left">
+              <div class="link-icon-box" style="color:var(--accent-rose);">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.79 0l2.96 2.66"/><path d="m18 15-2-2"/><path d="m15 18-2-2"/></svg>
+              </div>
+              <div class="link-texts">
+                <div class="link-title-line">
+                  <span class="link-name">推しサポ (Oshiss Web)</span>
+                  <span class="link-badge">WEB APP</span>
+                </div>
+                <p class="link-detail">完全端末内保存・P2P直接同期の推し活支援Webアプリ</p>
+              </div>
+            </div>
+            <div class="link-right">
+              <button type="button" class="copy-btn copy-link-btn" data-url="https://toku0716.github.io/oshi_web/" data-title="推しサポ" title="URLをコピー">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+              <div class="arrow-box">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <!-- Tech Stack Matrix (技術スタック) -->
+      <section class="content-block">
+        <div class="block-header">
+          <span class="mono-label">[ TECH STACK ]</span>
+          <h2 class="block-title">使用技術・関心領域</h2>
         </div>
 
-        <p class="contact-address">contact@example.com</p>
-      </div>
+        <div class="skills-grid-simple">
+          <div class="skill-category-simple">
+            <span class="skill-cat-title">Frontend</span>
+            <p class="skill-cat-desc">TypeScript, React 19, Next.js, Tailwind CSS, Vite, PWA, IndexedDB</p>
+          </div>
+          <div class="skill-category-simple">
+            <span class="skill-cat-title">Native & macOS</span>
+            <p class="skill-cat-desc">Swift 6, SwiftUI, AppKit, Combine, Apple Human Interface Guidelines</p>
+          </div>
+          <div class="skill-category-simple">
+            <span class="skill-cat-title">Systems & AI</span>
+            <p class="skill-cat-desc">C99 (POSIX), Python, Local LLM (Ollama), WebRTC, Git</p>
+          </div>
+        </div>
+      </section>
+
     </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-content">
-      <div class="footer-academic-line">
-        <span style="font-weight:700; color:var(--text-main);">Yuuki</span>
-        <span>/</span>
+    <div class="container-narrow footer-inner">
+      <div class="footer-meta">
+        <span class="footer-name">Yuuki</span>
+        <span class="footer-divider">•</span>
         <span>ZEN大学 知能情報社会学部</span>
-        <span>/</span>
+        <span class="footer-divider">•</span>
         <span>© 2026</span>
       </div>
 
-      <div>
-        <button class="footer-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-          <span>ページ先頭へ</span>
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="19" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-        </button>
-      </div>
+      <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <span>先頭へ</span>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="19" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+      </button>
     </div>
   </footer>
-
-  <!-- Project Detail Modal -->
-  <div id="projectModal" class="modal-layer">
-    <div class="modal-frame">
-      <button id="modalCloseBtn" class="modal-close-trigger" aria-label="閉じる">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-      </button>
-
-      <div class="modal-heading-area">
-        <div id="modalIcon" class="modal-symbol"></div>
-        <div>
-          <h3 id="modalTitle" class="modal-title-text"></h3>
-          <p id="modalSubtitle" class="modal-subtext"></p>
-        </div>
-      </div>
-
-      <div class="modal-metadata-strip">
-        <span id="modalYear"></span>
-        <span>•</span>
-        <span id="modalCategory"></span>
-      </div>
-
-      <div class="modal-body-section">
-        <div class="mono-label" style="margin-bottom:0.4rem;">OVERVIEW</div>
-        <p id="modalDesc" style="margin-bottom:1.25rem;"></p>
-
-        <div class="mono-label" style="margin-bottom:0.4rem;">KEY ARCHITECTURE & HIGHLIGHTS</div>
-        <ul id="modalFeatures" class="modal-bullet-list"></ul>
-
-        <div class="mono-label" style="margin-bottom:0.4rem;">TECH STACK</div>
-        <div id="modalTechTags" class="modal-tech-row"></div>
-      </div>
-
-      <div class="modal-button-row">
-        <a id="modalGithubBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="font-size:0.78rem; padding: 0.45rem 0.9rem;">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-          <span>GitHub</span>
-        </a>
-        <a id="modalDemoBtn" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-solid" style="font-size:0.78rem; padding: 0.45rem 1rem;">
-          <span>アプリを起動 / デモ</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-        </a>
-      </div>
-    </div>
-  </div>
 
   <!-- Toast Notification -->
   <div id="toast" class="toast-pill">
