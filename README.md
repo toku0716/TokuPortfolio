@@ -9,9 +9,8 @@
 
 1. **自己紹介・背景（Who I am）**:
    - ZEN大学（知能情報社会学部）在籍の学生エンジニアとしてのアイデンティティと活動方針。
-2. **代表制作物のケーススタディ（Case Study）**:
-   - 代表作『推しサポ (Oshiss Web)』におけるローカルファースト（IndexedDB）設計、WebRTC暗号化P2P通信による端末間直接同期、PWA技術選定の根拠と思考プロセス。
-   - サブプロジェクト（macOS Native Suite, C Text Editor, DevBrowser）のアーキテクチャ要約。
+2. **制作・探究プロジェクトのケーススタディ（Case Study）**:
+   - macOSネイティブアプリ（Swift/AppKit）やC言語テキストエディタ、開発者向けツール（DevBrowser）等のアーキテクチャと思考プロセス。
 3. **ZEN大学での学修と探究（Academic Foundation）**:
    - 大学での数理・情報基盤・社会ネットワークの学びと、自律的なソフトウェア開発の往復・相乗効果。
 4. **技術スタック（Technical Competencies）**:
