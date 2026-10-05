@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku - 公式ページ</title>
-  <!-- Google Fonts: 落合陽一サイト公式と同一フォント -->
+  <title>Toku - ZEN大学 知能情報社会学部</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400&family=Prompt:wght@200;300;400&display=swap" rel="stylesheet">
@@ -17,10 +17,6 @@
           fontFamily: {
             serif: ['"Noto Serif JP"', 'serif'],
             prompt: ['"Prompt"', 'sans-serif'],
-          },
-          letterSpacing: {
-            'ochiai': '0.666em',
-            'ochiai-heading': '0.333em',
           }
         }
       }
@@ -30,56 +26,32 @@
 </head>
 <body class="bg-black text-[#e5e5e5] font-serif antialiased min-h-screen selection:bg-neutral-800 selection:text-white relative">
 
-  <!-- 星空・スクロール連動レイヤー（デジタルネイチャーの微細な光） -->
+  <!-- 星空・スクロール連動レイヤー（微細な光の粒子） -->
   <div class="stars-backdrop" aria-hidden="true">
     <div class="star-layer layer-far"></div>
     <div class="star-layer layer-mid"></div>
     <div class="star-layer layer-near"></div>
   </div>
 
-  <!-- 全体ラッパー -->
-  <div class="relative z-10 w-full min-h-screen flex flex-col justify-between">
+  <!-- メインレイアウト -->
+  <div class="relative z-10 max-w-3xl mx-auto px-6 py-16 sm:px-12 sm:py-24 flex flex-col min-h-screen justify-between">
 
-    <!-- トップヘッダー / ナビゲーション -->
-    <header class="w-full px-6 py-6 sm:px-12 sm:py-8 flex justify-between items-center border-b border-[#232323]/60">
-      <a href="#" class="font-prompt font-light text-sm sm:text-base tracking-[0.1em] text-white hover:opacity-60 transition-opacity">Toku</a>
-      <p class="font-prompt font-extralight text-xs sm:text-xs text-neutral-400 tracking-[0.15em]">ZEN UNIVERSITY</p>
-    </header>
+    <div class="space-y-20">
 
-    <!-- ファーストビュー（落合陽一サイト公式 top-header の再現） -->
-    <section class="w-full px-6 sm:px-16 md:px-24 py-20 sm:py-28 max-w-5xl mx-auto flex flex-col justify-center">
-      <h1 class="font-prompt font-light text-4xl sm:text-6xl text-white tracking-[0.05em] mb-4">Toku</h1>
-      <p class="font-prompt font-extralight text-xs sm:text-sm text-neutral-400 tracking-[0.2em] mb-12">ZEN大学 知能情報社会学部 2年</p>
-
-      <!-- 落合陽一公式特有の極小・極薄・超広字間メッセージ（letter-spacing: .666em） -->
-      <div class="relative pt-6 border-t border-[#f3f3f3]/20 max-w-lg">
-        <p class="font-serif font-extralight text-xs sm:text-[13px] leading-[2.6] tracking-ochiai text-neutral-300">
-          情報と計算機，<br>
-          ことば，構成，<br>
-          2022年の模索から，<br>
-          2025年ZEN大学へ．
-        </p>
-      </div>
-
-      <div class="mt-16">
-        <a href="#content" class="inline-flex items-center text-xs font-prompt font-light tracking-[0.2em] text-neutral-400 hover:text-white transition-colors group">
-          <span>Explore</span>
-          <span class="ml-3 transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- メインアーカイブセクション（落合陽一公式 biography-section の再現） -->
-    <main id="content" class="w-full max-w-5xl mx-auto px-6 sm:px-16 md:px-24 py-16 space-y-24">
-
-      <!-- 略歴 -->
-      <section class="relative pt-12 border-t border-[#232323]">
-        <div class="mb-10">
-          <h2 class="font-serif font-extralight text-xl sm:text-2xl text-white tracking-ochiai-heading mb-1">略歴</h2>
-          <span class="font-prompt font-extralight text-[11px] text-neutral-500 tracking-[0.15em] block">BIOGRAPHY</span>
+      <!-- ヘッダー -->
+      <header class="border-b border-[#232323] pb-10 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-3">
+        <div>
+          <h1 class="font-prompt font-light text-3xl sm:text-4xl text-white tracking-[0.05em] mb-2">Toku</h1>
+          <p class="font-prompt font-extralight text-xs sm:text-sm text-neutral-400 tracking-[0.15em]">ZEN大学 知能情報社会学部 2年</p>
         </div>
+      </header>
 
-        <div class="font-serif font-extralight text-sm sm:text-[15px] leading-[2.4] tracking-[0.1em] text-neutral-300 max-w-2xl space-y-6">
+      <!-- 私について -->
+      <section>
+        <h2 class="font-serif font-extralight text-lg sm:text-xl text-white tracking-[0.2em] border-b border-[#232323] pb-3 mb-8">
+          私について
+        </h2>
+        <div class="font-serif font-extralight text-sm sm:text-base leading-[2.4] tracking-[0.06em] text-neutral-300 space-y-6">
           <p>
             2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
           </p>
@@ -89,44 +61,22 @@
         </div>
       </section>
 
-      <!-- 活動（落合陽一公式 biography-table の構造） -->
-      <section class="relative pt-12 border-t border-[#232323]">
-        <div class="mb-10">
-          <h2 class="font-serif font-extralight text-xl sm:text-2xl text-white tracking-ochiai-heading mb-1">活動</h2>
-          <span class="font-prompt font-extralight text-[11px] text-neutral-500 tracking-[0.15em] block">ACTIVITIES</span>
-        </div>
-
-        <div class="w-full border-t border-[#232323]">
-          <div class="py-8 border-b border-[#232323] flex flex-col sm:flex-row sm:items-baseline gap-4 sm:gap-12">
-            <span class="font-prompt font-extralight text-xs sm:text-sm text-neutral-500 tracking-[0.1em] w-24 shrink-0">2025</span>
-            <div class="flex-1">
-              <h3 class="font-serif font-light text-base sm:text-lg text-white tracking-[0.05em] mb-2">磁石祭ZERO 番組台本担当</h3>
-              <p class="font-serif font-extralight text-xs sm:text-sm text-neutral-400 leading-[2.2] tracking-[0.08em]">
-                2025年に開催されたZEN大学初の文化祭「磁石祭ZERO」にて、番組の台本制作を担当しました。
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <!-- リンク -->
-      <section class="relative pt-12 border-t border-[#232323]">
-        <div class="mb-10">
-          <h2 class="font-serif font-extralight text-xl sm:text-2xl text-white tracking-ochiai-heading mb-1">リンク</h2>
-          <span class="font-prompt font-extralight text-[11px] text-neutral-500 tracking-[0.15em] block">LINKS</span>
-        </div>
-
-        <div class="w-full border-t border-[#232323] divide-y divide-[#232323]">
-          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="py-6 flex justify-between items-center group transition-opacity hover:opacity-60">
-            <span class="font-prompt font-light text-sm sm:text-base text-neutral-200 tracking-[0.08em]">GitHub</span>
+      <section>
+        <h2 class="font-serif font-extralight text-lg sm:text-xl text-white tracking-[0.2em] border-b border-[#232323] pb-3 mb-6">
+          リンク
+        </h2>
+        <div class="divide-y divide-[#232323]">
+          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="py-5 flex justify-between items-center group transition-opacity hover:opacity-60">
+            <span class="font-prompt font-light text-sm sm:text-base text-neutral-200 tracking-[0.06em]">GitHub</span>
             <span class="font-prompt font-extralight text-xs text-neutral-500 tracking-[0.05em] flex items-center gap-1 group-hover:text-white transition-colors">
               github.com/toku0716
               <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
             </span>
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="py-6 flex justify-between items-center group transition-opacity hover:opacity-60">
-            <span class="font-prompt font-light text-sm sm:text-base text-neutral-200 tracking-[0.08em]">X (Twitter)</span>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="py-5 flex justify-between items-center group transition-opacity hover:opacity-60">
+            <span class="font-prompt font-light text-sm sm:text-base text-neutral-200 tracking-[0.06em]">X (Twitter)</span>
             <span class="font-prompt font-extralight text-xs text-neutral-500 tracking-[0.05em] flex items-center gap-1 group-hover:text-white transition-colors">
               x.com
               <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
@@ -135,12 +85,12 @@
         </div>
       </section>
 
-    </main>
+    </div>
 
-    <!-- フッター（落合陽一公式 top-footer の再現） -->
-    <footer class="w-full px-6 py-12 sm:px-16 md:px-24 max-w-5xl mx-auto border-t border-[#232323] mt-24 flex flex-col sm:flex-row justify-between items-center gap-4">
+    <!-- フッター -->
+    <footer class="border-t border-[#232323] pt-8 mt-24 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-3">
       <p class="font-prompt font-extralight text-[11px] text-neutral-500 tracking-[0.1em]">© 2026 Toku</p>
-      <p class="font-prompt font-extralight text-[11px] text-neutral-600 tracking-[0.15em]">ZEN UNIVERSITY</p>
+      <p class="font-prompt font-extralight text-[11px] text-neutral-600 tracking-[0.12em]">ZEN UNIVERSITY</p>
     </footer>
 
   </div>
