@@ -3,43 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku - ポートフォリオ</title>
+  <title>Toku - ZEN大学 知能情報社会学部</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    /* 背景画像を画面全体に固定表示 */
-    body {
-      background-image: url('images/bg.jpg');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      background-repeat: no-repeat;
-    }
-  </style>
 </head>
-<body class="min-h-screen text-neutral-100 font-sans antialiased flex flex-col justify-between p-4 sm:p-8 md:p-12 relative selection:bg-white selection:text-black">
+<body class="bg-[#fafafa] text-neutral-800 font-sans antialiased min-h-screen selection:bg-neutral-200">
 
-  <!-- 背景の暗幕オーバーレイ（写真の夜景の美しさを残しつつ文字を読みやすく） -->
-  <div class="fixed inset-0 bg-black/40 backdrop-blur-[2px] pointer-events-none" aria-hidden="true"></div>
+  <div class="max-w-2xl mx-auto px-6 py-16 sm:py-24">
 
-  <!-- メインコンテンツラッパー -->
-  <div class="relative z-10 w-full max-w-xl mx-auto my-auto py-10">
+    <!-- ヘッダー -->
+    <header class="border-b border-neutral-200 pb-8 mb-10">
+      <h1 class="text-3xl sm:text-4xl font-bold text-neutral-900 tracking-tight mb-2">Toku</h1>
+      <p class="text-base text-neutral-600 font-medium">ZEN大学 知能情報社会学部 2年生</p>
+    </header>
 
-    <!-- すりガラス調のシンプルカード -->
-    <main class="bg-neutral-950/75 backdrop-blur-xl border border-white/15 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8">
-
-      <!-- ヘッダー -->
-      <header class="border-b border-white/10 pb-6">
-        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">Toku</h1>
-        <p class="text-sm sm:text-base text-neutral-300 font-medium tracking-wide">ZEN大学 知能情報社会学部 2年</p>
-      </header>
+    <!-- メインコンテンツ -->
+    <main class="space-y-10">
 
       <!-- 私について -->
-      <section class="space-y-3">
-        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-400 uppercase">
+      <section>
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-500 uppercase mb-3">
           私について
         </h2>
-        <div class="text-neutral-200 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
+        <div class="bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 shadow-sm space-y-4 text-neutral-700 text-base leading-relaxed">
           <p>
             2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
           </p>
@@ -50,21 +36,27 @@
       </section>
 
       <!-- リンク -->
-      <section class="space-y-3 pt-2 border-t border-white/10">
-        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-400 uppercase">
+      <section>
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-500 uppercase mb-3">
           リンク
         </h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" 
-             class="flex justify-between items-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all group">
-            <span class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors">GitHub</span>
-            <span class="text-xs text-neutral-400 group-hover:text-white transition-colors">↗</span>
+          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer"
+             class="flex justify-between items-center p-4 bg-white border border-neutral-200 rounded-xl shadow-sm hover:border-neutral-400 hover:shadow transition-all group">
+            <div>
+              <span class="text-base font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors block">GitHub</span>
+              <span class="text-xs text-neutral-500 font-mono mt-0.5 block">github.com/toku0716</span>
+            </div>
+            <span class="text-neutral-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-sm ml-2">↗</span>
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" 
-             class="flex justify-between items-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all group">
-            <span class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors">X (Twitter)</span>
-            <span class="text-xs text-neutral-400 group-hover:text-white transition-colors">↗</span>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+             class="flex justify-between items-center p-4 bg-white border border-neutral-200 rounded-xl shadow-sm hover:border-neutral-400 hover:shadow transition-all group">
+            <div>
+              <span class="text-base font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors block">X (Twitter)</span>
+              <span class="text-xs text-neutral-500 font-mono mt-0.5 block">x.com</span>
+            </div>
+            <span class="text-neutral-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-sm ml-2">↗</span>
           </a>
         </div>
       </section>
@@ -72,8 +64,8 @@
     </main>
 
     <!-- フッター -->
-    <footer class="mt-6 text-center text-xs text-white/70 drop-shadow">
-      <p>© 2026 Toku — ZEN UNIVERSITY</p>
+    <footer class="border-t border-neutral-200 mt-16 pt-8 text-center text-xs text-neutral-500">
+      <p>© 2026 Toku — ZEN大学 知能情報社会学部</p>
     </footer>
 
   </div>
