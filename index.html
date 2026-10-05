@@ -1,74 +1,305 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku - ZEN大学 知能情報社会学部</title>
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toku - Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Custom Editorial Styles -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-[#fafafa] text-neutral-800 font-sans antialiased min-h-screen selection:bg-neutral-200">
+<body class="antialiased selection:bg-white selection:text-black min-h-screen text-white bg-black">
 
-  <div class="max-w-2xl mx-auto px-6 py-16 sm:py-24">
+    <!-- ナビゲーションバー（上部固定） -->
+    <nav class="fixed top-0 left-0 w-full z-50 nav-blur px-6 md:px-12 py-4 flex justify-between items-center">
+        <a href="#hero" class="text-xl font-extrabold tracking-widest text-white hover:opacity-80 transition-opacity">
+            TOKU
+        </a>
+        <div class="flex items-center space-x-6 md:space-x-8 text-xs sm:text-sm font-medium tracking-wide">
+            <a href="#about" class="text-gray-300 hover:text-white transition-colors">About</a>
+            <a href="#work" class="text-gray-300 hover:text-white transition-colors">Work</a>
+            <a href="#link" class="text-gray-300 hover:text-white transition-colors">Link</a>
+        </div>
+    </nav>
 
-    <!-- ヘッダー -->
-    <header class="border-b border-neutral-200 pb-8 mb-10">
-      <h1 class="text-3xl sm:text-4xl font-bold text-neutral-900 tracking-tight mb-2">Toku</h1>
-      <p class="text-base text-neutral-600 font-medium">ZEN大学 知能情報社会学部 2年生</p>
+    <!-- Hero セクション（全画面ファーストビュー） -->
+    <header id="hero" class="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 relative z-10 max-w-6xl mx-auto">
+        <div class="space-y-6 pt-20">
+            <div class="inline-block tag-badge">
+                PORTFOLIO
+            </div>
+            <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-tight text-white leading-none">
+                Toku
+            </h1>
+            <div class="space-y-2 max-w-2xl">
+                <p class="text-xl sm:text-2xl md:text-3xl text-gray-200 font-light tracking-wide">
+                    Sophomore, Faculty of Intelligent Information and Society
+                </p>
+                <p class="text-base sm:text-lg text-gray-400 font-mono tracking-widest uppercase">
+                    ZEN University
+                </p>
+            </div>
+        </div>
+
+        <!-- スクロール誘導インジケータ -->
+        <div class="absolute bottom-10 left-6 md:left-16 flex items-center gap-3 text-xs font-mono text-gray-400 tracking-widest uppercase scroll-indicator">
+            <span>Scroll</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+            </svg>
+        </div>
     </header>
 
     <!-- メインコンテンツ -->
-    <main class="space-y-10">
+    <main class="relative z-10 max-w-6xl mx-auto px-6 md:px-16 lg:px-24 space-y-32 pb-32">
 
-      <!-- 私について -->
-      <section>
-        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-500 uppercase mb-3">
-          私について
-        </h2>
-        <div class="bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 shadow-sm space-y-4 text-neutral-700 text-base leading-relaxed">
-          <p>
-            2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
-          </p>
-          <p>
-            その中でZEN大学ができることを知り、またAIについてしっかり学びたいという思いから、2025年4月に入学しました。現在は知能情報社会学部の2年生です。
-          </p>
-        </div>
-      </section>
-
-      <!-- リンク -->
-      <section>
-        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-500 uppercase mb-3">
-          リンク
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer"
-             class="flex justify-between items-center p-4 bg-white border border-neutral-200 rounded-xl shadow-sm hover:border-neutral-400 hover:shadow transition-all group">
-            <div>
-              <span class="text-base font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors block">GitHub</span>
-              <span class="text-xs text-neutral-500 font-mono mt-0.5 block">github.com/toku0716</span>
+        <!-- 01: About セクション -->
+        <section id="about" class="space-y-10 pt-10">
+            <div class="flex items-baseline justify-between border-b border-white/15 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-gray-400">01</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase">
+                        About
+                    </h2>
+                </div>
             </div>
-            <span class="text-neutral-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-sm ml-2">↗</span>
-          </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer"
-             class="flex justify-between items-center p-4 bg-white border border-neutral-200 rounded-xl shadow-sm hover:border-neutral-400 hover:shadow transition-all group">
-            <div>
-              <span class="text-base font-semibold text-neutral-900 group-hover:text-blue-600 transition-colors block">X (Twitter)</span>
-              <span class="text-xs text-neutral-500 font-mono mt-0.5 block">x.com</span>
+            <div class="project-card p-8 md:p-12 space-y-8">
+                <div class="space-y-3">
+                    <h3 class="text-3xl md:text-4xl font-extrabold text-white">
+                        Toku
+                    </h3>
+                    <p class="text-lg md:text-xl text-gray-200 font-light">
+                        Sophomore, Faculty of Intelligent Information and Society, ZEN University
+                    </p>
+                </div>
+
+                <div class="section-divider"></div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-300 text-base leading-relaxed font-normal">
+                    <p>
+                        ZEN大学 知能情報社会学部にて、人工知能・データサイエンス・現代の情報社会構造についての探求を深めています。
+                    </p>
+                    <p>
+                        Flutterによるモバイルネイティブ開発、React/TypeScriptによるモダンWeb/PWA、そしてPyTorchやLLMを活用した自律型AIシステムの開発まで、理論と実装の架橋に取り組んでいます。
+                    </p>
+                </div>
+
+                <div class="pt-4 flex flex-wrap gap-3">
+                    <span class="tag-badge">Flutter / Dart</span>
+                    <span class="tag-badge">React 19 / TypeScript</span>
+                    <span class="tag-badge">Python / PyTorch</span>
+                    <span class="tag-badge">LLM (Ollama / Gemini)</span>
+                    <span class="tag-badge">WebGL / Three.js</span>
+                    <span class="tag-badge">AI-Driven Dev</span>
+                </div>
             </div>
-            <span class="text-neutral-400 group-hover:text-blue-600 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-sm ml-2">↗</span>
-          </a>
-        </div>
-      </section>
+        </section>
+
+        <!-- 02: Work セクション -->
+        <section id="work" class="space-y-10 pt-10">
+            <div class="flex items-baseline justify-between border-b border-white/15 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-gray-400">02</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase">
+                        Work
+                    </h2>
+                </div>
+                <span class="text-xs font-mono text-gray-400">4 Projects</span>
+            </div>
+
+            <!-- プロジェクト一覧（2x2 グリッドレイアウト） -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                <!-- 01: 推しサポ (アプリ版) -->
+                <div class="project-card flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-gray-400">01</span>
+                            <span class="tag-badge">Flutter / Dart</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                                推しサポ（アプリ版）
+                            </h3>
+                            <p class="text-xs font-mono text-gray-400 mt-1">iOS & Android App</p>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed font-normal">
+                            推し活総合サポートモバイルアプリケーション。推しの情報管理、イベント予定カレンダー、グッズ管理や購入金額集計などをネイティブ対応。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Flutter</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Dart</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Firebase Auth</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Cloud Firestore</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
+                        <span>Mobile Native</span>
+                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- 02: 推しサポ Web版 (PWA) -->
+                <div class="project-card flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-gray-400">02</span>
+                            <span class="tag-badge">React 19 / TypeScript</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                                推しサポ Web版（PWA）
+                            </h3>
+                            <p class="text-xs font-mono text-gray-400 mt-1">Progressive Web App</p>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed font-normal">
+                            推しサポのWeb / PWA版。Service Workerによるオフライン動作やインストールに対応し、IndexedDBを活用した完全端末内ローカル保存を実現。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">React 19</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">TypeScript</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Tailwind CSS v4</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Vite PWA</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">IndexedDB (idb)</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
+                        <span>Web App / PWA</span>
+                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- 03: AI VTuber システム -->
+                <div class="project-card flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-gray-400">03</span>
+                            <span class="tag-badge">Python / PyTorch</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                                AI VTuber システム
+                            </h3>
+                            <p class="text-xs font-mono text-gray-400 mt-1">Autonomous Interactive Streamer</p>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed font-normal">
+                            YouTubeライブ配信とOBS連携に対応した自律対話型AI VTuberシステム。PyTorchによる長期ニューラル記憶、Ollama/Gemini連携、VOICEVOX音声排他制御を構築。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Python</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">PyTorch</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Ollama (Gemma / LLaMA)</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Gemini API</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">VOICEVOX</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
+                        <span>AI / Neural System</span>
+                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+                <!-- 04: ポートフォリオサイト -->
+                <div class="project-card flex flex-col justify-between group">
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-start">
+                            <span class="text-xs font-mono text-gray-400">04</span>
+                            <span class="tag-badge">Three.js / WebGL</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                                ポートフォリオサイト
+                            </h3>
+                            <p class="text-xs font-mono text-gray-400 mt-1">This Website</p>
+                        </div>
+                        <p class="text-sm text-gray-300 leading-relaxed font-normal">
+                            AI対話駆動開発（AI Pair Programming）により、要件定義から実装・最適化までをシームレスに構築。Three.jsによる白の深宇宙スターフィールド演出を搭載。
+                        </p>
+                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">JavaScript (ES6+)</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Three.js (WebGL)</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Tailwind CSS</span>
+                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">AI対話駆動開発</span>
+                        </div>
+                    </div>
+                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
+                        <span>Creative WebGL</span>
+                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 03: Link セクション -->
+        <section id="link" class="space-y-10 pt-10">
+            <div class="flex items-baseline justify-between border-b border-white/15 pb-4">
+                <div class="flex items-center gap-3">
+                    <span class="text-xs font-mono text-gray-400">03</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white uppercase">
+                        Link
+                    </h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <!-- GitHub -->
+                <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer"
+                   class="project-card p-6 md:p-8 flex justify-between items-center group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-mono text-gray-400 uppercase tracking-widest">Repository</div>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                            GitHub
+                        </h3>
+                        <p class="text-sm font-mono text-gray-400">github.com/toku0716</p>
+                    </div>
+                    <span class="text-2xl text-gray-400 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-4">↗</span>
+                </a>
+
+                <!-- X (Twitter) -->
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer"
+                   class="project-card p-6 md:p-8 flex justify-between items-center group">
+                    <div class="space-y-1">
+                        <div class="text-xs font-mono text-gray-400 uppercase tracking-widest">Social Media</div>
+                        <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
+                            X (Twitter)
+                        </h3>
+                        <p class="text-sm font-mono text-gray-400">x.com</p>
+                    </div>
+                    <span class="text-2xl text-gray-400 group-hover:text-white group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform ml-4">↗</span>
+                </a>
+            </div>
+        </section>
 
     </main>
 
     <!-- フッター -->
-    <footer class="border-t border-neutral-200 mt-16 pt-8 text-center text-xs text-neutral-500">
-      <p>© 2026 Toku — ZEN大学 知能情報社会学部</p>
+    <footer class="relative z-10 border-t border-white/10 py-16 px-6 md:px-16 lg:px-24 max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+        <div>
+            <div class="text-lg font-bold text-white tracking-widest">TOKU</div>
+            <p class="text-xs text-gray-500 font-mono mt-1">© 2026 Toku. Built with Three.js & Tailwind CSS.</p>
+        </div>
+
+        <div class="flex items-center space-x-6 text-sm font-mono text-gray-300">
+            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline-offset-4 hover:underline">
+                GitHub ↗
+            </a>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors underline-offset-4 hover:underline">
+                X (Twitter) ↗
+            </a>
+            <a href="#hero" class="text-gray-500 hover:text-white transition-colors">
+                Back to Top ↑
+            </a>
+        </div>
     </footer>
 
-  </div>
-
+    <!-- Three.js Bold White Deep Space Starfield Animation -->
+    <script src="space-3d.js"></script>
 </body>
 </html>
