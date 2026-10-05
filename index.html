@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku</title>
+  <title>Toku - ZEN大学 知能情報社会学部</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-black text-neutral-200 font-sans antialiased min-h-screen selection:bg-neutral-800 selection:text-white relative">
 
   <!-- スクロール連動・星空背景レイヤー -->
   <div class="stars-backdrop" aria-hidden="true">
@@ -18,76 +20,71 @@
       <span class="sparkle-star sp-2">✦</span>
       <span class="sparkle-star sp-3">★</span>
       <span class="sparkle-star sp-4">✦</span>
-      <span class="sparkle-star sp-5">✦</span>
     </div>
   </div>
 
-  <div class="layout">
+  <div class="relative z-10 max-w-3xl mx-auto px-6 py-12 md:px-12 md:py-20 flex flex-col min-h-screen justify-between">
 
-    <!-- ナビゲーション / トップバー -->
-    <header class="topbar">
-      <div class="topbar-brand">
-        <span class="brand-name">Toku</span>
-        <span class="brand-divider">/</span>
-        <span class="brand-meta">ZEN大学 知能情報社会学部 2年</span>
-      </div>
-    </header>
+    <div>
+      <!-- ヘッダー（落合陽一スタイルの端正なタイポグラフィ） -->
+      <header class="border-b border-neutral-800/80 pb-8 mb-14 flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-2">
+        <h1 class="text-2xl md:text-3xl font-light tracking-wide text-white">Toku</h1>
+        <p class="font-mono text-xs md:text-sm text-neutral-400 tracking-wider">ZEN大学 知能情報社会学部 2年</p>
+      </header>
 
-    <!-- Figma 2026 ベントーグリッド -->
-    <main class="bento-grid">
+      <!-- メインコンテンツ -->
+      <main class="space-y-16">
 
-      <!-- 私について -->
-      <section class="bento-box bento-large">
-        <div class="box-header">
-          <h2 class="box-label">私について</h2>
-        </div>
-        <div class="box-body">
-          <p class="body-lead">
-            2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
-          </p>
-          <p class="body-sub">
-            その中でZEN大学ができることを知り、またAIについてしっかり学びたいという思いから、2025年4月に入学しました。現在は知能情報社会学部の2年生です。
-          </p>
-        </div>
-      </section>
+        <!-- 略歴 -->
+        <section>
+          <h2 class="text-xs font-mono tracking-widest text-neutral-500 uppercase border-b border-neutral-900 pb-2 mb-6">略歴</h2>
+          <div class="text-neutral-300 text-sm md:text-base leading-relaxed space-y-4 font-light">
+            <p>
+              2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
+            </p>
+            <p>
+              その中でZEN大学ができることを知り、またAIについてしっかり学びたいという思いから、2025年4月に入学しました。現在は知能情報社会学部の2年生です。
+            </p>
+          </div>
+        </section>
 
-      <!-- 活動 -->
-      <section class="bento-box">
-        <div class="box-header">
-          <h2 class="box-label">活動</h2>
-        </div>
-        <div class="box-body">
-          <h3 class="entry-title">磁石祭ZERO 番組台本担当</h3>
-          <p class="entry-desc">
-            2025年に開催されたZEN大学初の文化祭「磁石祭ZERO」にて、番組の台本制作を担当しました。
-          </p>
-        </div>
-      </section>
+        <!-- 活動 -->
+        <section>
+          <h2 class="text-xs font-mono tracking-widest text-neutral-500 uppercase border-b border-neutral-900 pb-2 mb-6">活動</h2>
+          <div class="divide-y divide-neutral-900/80">
+            <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 sm:gap-6">
+              <span class="font-mono text-xs text-neutral-500 shrink-0">2025年</span>
+              <div class="flex-1">
+                <h3 class="text-sm md:text-base text-neutral-200 font-medium">磁石祭ZERO 番組台本担当</h3>
+                <p class="text-xs md:text-sm text-neutral-400 mt-1 leading-relaxed font-light">
+                  2025年に開催されたZEN大学初の文化祭「磁石祭ZERO」にて、番組の台本制作を担当しました。
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <!-- リンク -->
-      <section class="bento-box">
-        <div class="box-header">
-          <h2 class="box-label">リンク</h2>
-        </div>
-        <div class="box-body">
-          <div class="link-stack">
-            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-item">
-              <span class="link-name">GitHub</span>
-              <span class="link-arrow">↗</span>
+        <!-- リンク -->
+        <section>
+          <h2 class="text-xs font-mono tracking-widest text-neutral-500 uppercase border-b border-neutral-900 pb-2 mb-6">リンク</h2>
+          <div class="divide-y divide-neutral-900/80">
+            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="py-3 flex justify-between items-center group transition-colors hover:text-white">
+              <span class="text-sm font-medium text-neutral-300 group-hover:text-white transition-colors">GitHub</span>
+              <span class="font-mono text-xs text-neutral-500 group-hover:text-neutral-300 transition-colors">github.com/toku0716 ↗</span>
             </a>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-item">
-              <span class="link-name">X</span>
-              <span class="link-arrow">↗</span>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="py-3 flex justify-between items-center group transition-colors hover:text-white">
+              <span class="text-sm font-medium text-neutral-300 group-hover:text-white transition-colors">X</span>
+              <span class="font-mono text-xs text-neutral-500 group-hover:text-neutral-300 transition-colors">x.com ↗</span>
             </a>
           </div>
-        </div>
-      </section>
+        </section>
 
-    </main>
+      </main>
+    </div>
 
     <!-- フッター -->
-    <footer class="footer">
-      <p>© 2026 Toku</p>
+    <footer class="border-t border-neutral-900/80 pt-8 mt-20 text-center sm:text-left flex flex-col sm:flex-row justify-between items-center gap-2">
+      <p class="font-mono text-xs text-neutral-600">© 2026 Toku — ZEN University</p>
     </footer>
 
   </div>
