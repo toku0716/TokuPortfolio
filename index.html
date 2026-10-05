@@ -3,113 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku - ポートフォリオ</title>
+  <title>Toku</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="site-wrapper">
+  <div class="layout">
 
-    <!-- ヘッダー -->
-    <header class="site-header">
-      <div class="header-inner">
-        <div class="header-identity">
-          <h1 class="user-name">Toku</h1>
-          <p class="user-sub">ZEN大学 知能情報社会学部 2年生</p>
-        </div>
-        <div class="header-status">
-          <span class="status-tag">在籍中</span>
-        </div>
+    <!-- ナビゲーション / トップバー -->
+    <header class="topbar">
+      <div class="topbar-brand">
+        <span class="brand-name">Toku</span>
+        <span class="brand-divider">/</span>
+        <span class="brand-meta">ZEN大学 知能情報社会学部 2年</span>
       </div>
     </header>
 
-    <main class="site-main">
+    <!-- Figma 2026 ベントーグリッド -->
+    <main class="bento-grid">
 
-      <!-- 概要 -->
-      <section class="panel-section">
-        <h2 class="panel-title">概要</h2>
-        <div class="panel-content text-block">
-          <p>
+      <!-- 私について -->
+      <section class="bento-box bento-large">
+        <div class="box-header">
+          <h2 class="box-label">私について</h2>
+        </div>
+        <div class="box-body">
+          <p class="body-lead">
             2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
           </p>
-          <p>
-            その中でZEN大学ができることを知り、AIについてしっかり学びたいという思いから2025年4月に入学しました。現在は知能情報社会学部の2年生として、情報科学とプログラミングの学習を進めています。
+          <p class="body-sub">
+            その中でZEN大学ができることを知り、またAIについてしっかり学びたいという思いから、2025年4月に入学しました。現在は知能情報社会学部の2年生です。
           </p>
         </div>
       </section>
 
       <!-- 活動 -->
-      <section class="panel-section">
-        <h2 class="panel-title">活動</h2>
-        <div class="panel-content">
-          <div class="activity-card">
-            <div class="activity-meta">
-              <span class="activity-date">2025年</span>
-              <span class="activity-type">文化祭・配信企画</span>
-            </div>
-            <h3 class="activity-name">磁石祭ZERO 番組台本制作</h3>
-            <p class="activity-desc">
-              ZEN大学初の文化祭「磁石祭ZERO」にて、番組の企画および台本の制作を担当しました。
-            </p>
-          </div>
+      <section class="bento-box">
+        <div class="box-header">
+          <h2 class="box-label">活動</h2>
         </div>
-      </section>
-
-      <!-- 技術・学修領域 -->
-      <section class="panel-section">
-        <h2 class="panel-title">技術・学修領域</h2>
-        <div class="panel-content">
-          <div class="skill-group">
-            <h3 class="group-title">プログラミング・Web技術</h3>
-            <div class="tag-list">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
-              <span class="tech-tag">TypeScript</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Git</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h3 class="group-title">大学での学修分野</h3>
-            <div class="tag-list">
-              <span class="tech-tag">知能情報科学</span>
-              <span class="tech-tag">人工知能基礎</span>
-              <span class="tech-tag">情報社会論</span>
-            </div>
-          </div>
-
-          <div class="skill-group">
-            <h3 class="group-title">執筆・制作</h3>
-            <div class="tag-list">
-              <span class="tech-tag">番組台本</span>
-              <span class="tech-tag">企画・シナリオ制作</span>
-              <span class="tech-tag">文章作成</span>
-            </div>
-          </div>
+        <div class="box-body">
+          <h3 class="entry-title">磁石祭ZERO 番組台本担当</h3>
+          <p class="entry-desc">
+            2025年に開催されたZEN大学初の文化祭「磁石祭ZERO」にて、番組の台本制作を担当しました。
+          </p>
         </div>
       </section>
 
       <!-- リンク -->
-      <section class="panel-section">
-        <h2 class="panel-title">リンク</h2>
-        <div class="panel-content">
-          <div class="link-grid">
-            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-card">
-              <div class="link-info">
-                <span class="link-service">GitHub</span>
-                <span class="link-url">github.com/toku0716</span>
-              </div>
-              <span class="link-icon">↗</span>
+      <section class="bento-box">
+        <div class="box-header">
+          <h2 class="box-label">リンク</h2>
+        </div>
+        <div class="box-body">
+          <div class="link-stack">
+            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-item">
+              <span class="link-name">GitHub</span>
+              <span class="link-arrow">↗</span>
             </a>
-
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-card">
-              <div class="link-info">
-                <span class="link-service">X (旧Twitter)</span>
-                <span class="link-url">x.com</span>
-              </div>
-              <span class="link-icon">↗</span>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-item">
+              <span class="link-name">X</span>
+              <span class="link-arrow">↗</span>
             </a>
           </div>
         </div>
@@ -118,7 +72,7 @@
     </main>
 
     <!-- フッター -->
-    <footer class="site-footer">
+    <footer class="footer">
       <p>© 2026 Toku</p>
     </footer>
 
