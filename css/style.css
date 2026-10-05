@@ -3,6 +3,10 @@
    ========================================================================== */
 
 /* Pure Deep Black Cosmic Canvas */
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --star-far: rgba(255, 255, 255, 0.25);
   --star-mid: rgba(230, 240, 255, 0.55);
