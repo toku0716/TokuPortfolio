@@ -1,27 +1,23 @@
 # Yuuki | Portfolio & Link Hub (ポートフォリオ兼リンク紹介サイト)
 
-ピュアな **HTML / CSS / JavaScript** だけで構築された、超軽量・依存パッケージ不要のポートフォリオ兼リンク集（Link-in-bio）サイトです。  
-Node.js やビルドツール（Vite/Webpackなど）を介さずに、ブラウザで `index.html` を開くだけで即座に動作します。GitHub Pagesや各種静的ホスティング（Netlify, Vercel, Cloudflare Pagesなど）にもそのまま配備可能です。
+**ZEN大学（知能情報社会学部）**に在籍するソフトウェアエンジニア・Yuukiのポートフォリオ兼リンク集（Link-in-bio）サイトです。  
+AI生成の定型的なデザイン（過剰なネオングラデーションや発光球体、無機質なテンプレート）を完全に排し、2026年のデザイントレンドである**「Strategic Restraint（意図的な抑制）」「Human-Crafted Editorial（編集的タイポグラフィ）」「Tactile UI（物理的な手触り感）」**を取り入れたピュアHTML/CSS/JSサイトです。
 
 ---
 
 ## 🌟 主な特徴
 
-- **完全ピュア（No Dependencies / No Build Step）**:
-  - React やビルドツールに依存せず、ブラウザ標準の HTML5 / CSS3 / ES6+ のみで動作。
-  - 軽量・高速で外部ライブラリの脆弱性やバージョン互換性トラブルがありません。
+- **ZEN大学生としての学びと実践の明記**:
+  - ドワンゴと日本財団が設立した日本初の本格的オンライン大学「ZEN大学（知能情報社会学部）」での学問的探究（数理・情報基盤・社会ネットワーク）と、実践的なソフトウェア開発の往復をわかりやすく記載。
+- **脱・AI量産型デザイン（Human-Centric 2026）**:
+  - 不要なAI風パープル・シアンのボケ球体や過剰なキラキラ演出を排除。
+  - 温かみのあるストーン調・建築的なグリッド構造、押下感（Tactile Feedback）のあるボタン、明快なタイポグラフィ階層を採用。
 - **2-in-1 ハイブリッド構成**:
-  - **リンク集（Link in Bio）**: X（旧Twitter）、GitHub、Zenn、Webアプリなどへのダイレクトリンクカード。
-  - **制作物ショーケース（Featured Works）**: 実際のプロダクト（推しサポ、AITuber App、DevBrowser、macOSアプリ群、C言語エディタなど）のBento Gridギャラリー。
-- **リッチなインタラクティブ機能**:
-  - **作品詳細モーダル**: カードをクリックすると、特徴リスト・技術スタック・リンクを表示。
-  - **キーワード検索 & カテゴリ絞り込み**: リアルタイムで作品をフィルタリング。
-  - **ワンクリックURLコピー**: リンクやメールアドレスをクリップボードにコピーし、トースト通知を表示。
-  - **サイト共有**: スマートフォンや対応ブラウザでの Web Share API 呼び出しに対応。
-  - **ダーク / ライトテーマ**: トグルボタンで切り替え可能（LocalStorageに自動保存）。
-  - **ナビゲーション追従**: スクロール位置に応じたアクティブリンクの自動ハイライト。
-- **2026 Modern Design**:
-  - 美しいグラスモーフィズム（すりガラス効果）、滑らかなアニメーション、アンビエントグラデーション。
+  - **リンク集（Link Hub）**: X、GitHub、Zenn、Webアプリなどへの高速ダイレクトアクセスカード（URLワンクリックコピー対応）。
+  - **制作物ショーケース（Bento Grid）**: 実際に開発したプロダクト（推しサポ、macOSネイティブアプリ群、DevBrowser、C言語製エディタなど）の構造化ギャラリー。
+- **完全ピュア実装（Zero Dependencies / No Build Step）**:
+  - Node.jsやビルドツール不要。ブラウザで `index.html` を開くだけで即座に高速動作。
+  - ダーク/ライトテーマ切り替え（LocalStorage自動保存）、リアルタイム検索、詳細モーダル表示、Web Share API共有を標準装備。
 
 ---
 
@@ -29,36 +25,16 @@ Node.js やビルドツール（Vite/Webpackなど）を介さずに、ブラウ
 
 ```text
 My_portfoliosite/
-├── index.html       # 全ページの骨格・コンテンツ・セクション構成
+├── index.html        # 全コンテンツの骨格（ZEN大学プロフィール・リンク・制作物）
 ├── css/
-│   └── style.css    # グラスモーフィズム・レスポンシブ・ダークテーマ等のCSS
+│   └── style.css     # 2026年エディトリアル・触覚デザイン・ダーク/ライトテーマ
 ├── js/
-│   └── script.js    # テーマ切替・検索・フィルタ・モーダル・コピー処理
-└── README.md        # プロジェクト説明書
+│   └── script.js     # 検索・カテゴリ分類・モーダル・URLコピー・テーマ制御
+└── README.md         # プロジェクト説明書
 ```
-
----
-
-## ⚙️ データのカスタマイズ方法
-
-### 1. 作品の詳細やリンクの変更 (`js/script.js`)
-`js/script.js` の先頭にある `projectsData` オブジェクトから、モーダルに表示される詳細情報（タイトル、概要、特徴、使用技術、URLなど）を直接書き換えられます。
-
-### 2. リンクカードやプロフィールの変更 (`index.html`)
-`index.html` 内のテキストやURLを変更するだけで反映されます：
-- プロフィール情報: `<section class="hero-section">`
-- リンク集カード: `<section id="links">` 内の `<a class="link-card">`
-- 制作物カード: `<section id="works">` 内の `<div class="work-card">`
-- スキル一覧: `<section id="skills">`
-- 理念・メッセージ: `<section id="about">`
-- お問い合わせメール: `<section id="contact">`
 
 ---
 
 ## 🚀 使い方
 
-ブラウザで `index.html` を直接ダブルクリックして開くか、お好みの静的Webサーバーでお使いいただけます。
-```bash
-# 例: macOS標準の簡易サーバー（必要な場合のみ）
-python3 -m http.server 8000
-```
+ブラウザで [`index.html`](file:///Users/yuuki/dev/My_portfoliosite/index.html) を直接ダブルクリックして開くか、任意の静的ホスティング（GitHub Pages, Cloudflare Pages, Netlify等）にそのままアップロードして公開できます。

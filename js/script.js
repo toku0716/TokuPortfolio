@@ -1,5 +1,6 @@
 /**
  * Yuuki Portfolio & Link Hub - Pure JavaScript
+ * 2026 Human-Crafted Architecture
  */
 
 // Project detailed database for modal
@@ -9,9 +10,9 @@ const projectsData = {
     subtitle: '端末内完結・安心プライバシーの推し活総合支援アプリ',
     year: '2026',
     category: 'WEB & アプリ',
-    accentColor: '#f43f5e',
+    accentColor: '#e11d48',
     icon: 'heart-handshake',
-    description: '「大切な推し活データを安全に、誰にも見られず管理したい」というニーズに応えるため、外部サーバーへのデータ保存を一切行わない完全ローカル（IndexedDB）完結の設計を実現。WebRTC（PeerJS）を用いた6桁暗号化コードによる端末間直接同期、2026年基準の洗練されたダーク/ライトテーマ、PWAオフライン対応などを備えています。',
+    description: '「大切な推し活データを安全に、誰にも見られず管理したい」という個人のプライバシーニーズに応えるため、外部サーバーへのデータ保存を一切行わない完全ローカル（IndexedDB）完結の設計を実現。WebRTC（PeerJS）を用いた6桁暗号化コードによる端末間直接同期、PWAオフライン対応などを備えています。',
     features: [
       '完全ローカル完結型ストレージ（外部サーバーへのデータ送信ゼロ）',
       '端末間（PC⇔スマホ）のWebRTC直接データ同期（6桁コード認証）',
@@ -22,20 +23,20 @@ const projectsData = {
     demoUrl: 'https://toku0716.github.io/oshi_web/',
     githubUrl: 'https://github.com/toku0716/oshi_web'
   },
-  'aituber-app': {
-    title: 'AITuber Interactive App',
-    subtitle: 'リアルタイム対話＆感情連動型次世代AIアバター',
-    year: '2026',
-    category: 'AI・対話',
-    accentColor: '#8b5cf6',
-    icon: 'bot',
-    description: 'ユーザーの音声入力をリアルタイム認識し、感情分析とLLMレスポンスを生成。発話内容に応じて「笑顔」「驚き」「共感」などのアバター表情を動的に切り替え、自然な会話のやりとりを可能にする対話エンジンです。ローカルLLM連携にも対応しています。',
+  'macos-suite': {
+    title: 'macOS Native Utility Suite',
+    subtitle: 'Swiftによる軽量・高速・美しいデスクトップユーティリティ群',
+    year: '2025 - 2026',
+    category: 'MACOS NATIVE',
+    accentColor: '#2563eb',
+    icon: 'layers',
+    description: 'AppleのHuman Interface Guidelinesを忠実に再現したmacOS専用アプリ群（ZipVault, Task Manager, Finder拡張, Video Player, Photo App）。SwiftUIとAppKitを組み合わせ、OS標準機能のように軽快で直感的な操作感を実現しています。',
     features: [
-      'リアルタイム音声入力からの超低遅延レスポンス生成',
-      '感情分析エンジンによるアバター表情の自動スイッチング',
-      'ローカルLLM対応による完全プライベート動作モード'
+      'Macネイティブの高速レンダリングと省電力設計',
+      'Zip暗号化ボールト（mac_zip_vault）による安全なアーカイブ保管',
+      'プロセス監視とリソース最適化ユーティリティ（mac_task_manager）'
     ],
-    techStack: ['Python', 'Ollama / OpenAI API', 'SpeechRecognition', 'Voice AI', 'WebSocket'],
+    techStack: ['Swift 6', 'SwiftUI', 'AppKit', 'Combine', 'macOS SDK'],
     demoUrl: '',
     githubUrl: 'https://github.com/toku0716'
   },
@@ -44,7 +45,7 @@ const projectsData = {
     subtitle: 'エンジニアの制作効率を最大化する特化型ブラウザ',
     year: '2026',
     category: '開発ツール',
-    accentColor: '#0ea5e9',
+    accentColor: '#0284c7',
     icon: 'compass',
     description: 'モバイル端末とデスクトップ画面を1画面内で並行プレビューし、スクロールや操作をシンクロさせてUI崩れを素早く発見できるツール。Web制作者のデイリーワークフローを加速します。',
     features: [
@@ -56,12 +57,46 @@ const projectsData = {
     demoUrl: '',
     githubUrl: 'https://github.com/toku0716'
   },
+  'c-text-editor': {
+    title: 'C Text Editor & GUI',
+    subtitle: '低レイヤーメモリ管理とターミナルバッファを追求したエディタ',
+    year: '2025',
+    category: '低レイヤー / C',
+    accentColor: '#475569',
+    icon: 'terminal',
+    description: 'VT100エスケープシーケンスによるターミナル生モード制御、ギャップバッファによる高速な文字列挿入・削除、低レイヤーのファイルI/Oを学究的かつ実用的に追求したプロジェクト。GUI版も併せて開発。',
+    features: [
+      '外部ライブラリゼロのピュアCによるポータブル設計',
+      '効率的なメモリギャップバッファによる大容量テキスト編集',
+      'ターミナルrawモードでのリアルタイムキーイベント捕捉'
+    ],
+    techStack: ['C99', 'POSIX APIs', 'Terminal VT100', 'Data Structures'],
+    demoUrl: '',
+    githubUrl: 'https://github.com/toku0716'
+  },
+  'aituber-app': {
+    title: 'AITuber Interactive Engine',
+    subtitle: 'リアルタイム対話＆感情連動型次世代AIアバター',
+    year: '2026',
+    category: 'AI・対話',
+    accentColor: '#7c3aed',
+    icon: 'bot',
+    description: 'ユーザーの音声入力をリアルタイム認識し、感情分析とLLMレスポンスを生成。発話内容に応じて「笑顔」「驚き」「共感」などのアバター表情を動的に切り替え、自然な会話のやりとりを可能にする対話エンジンです。ローカルLLM連携にも対応しています。',
+    features: [
+      'リアルタイム音声入力からの超低遅延レスポンス生成',
+      '感情分析エンジンによるアバター表情の自動スイッチング',
+      'ローカルLLM対応による完全プライベート動作モード'
+    ],
+    techStack: ['Python', 'Ollama / OpenAI API', 'SpeechRecognition', 'Voice AI', 'WebSocket'],
+    demoUrl: '',
+    githubUrl: 'https://github.com/toku0716'
+  },
   'akushu-repo-app': {
     title: 'Akushu Repo App (握手会レポ・会話記録)',
     subtitle: 'ファンイベントの感動を逃さないタイムラインレポ記録',
     year: '2025',
     category: 'WEB & アプリ',
-    accentColor: '#10b981',
+    accentColor: '#059669',
     icon: 'message-square-text',
     description: '「レポを書こうとした時には記憶が薄れてしまう」という課題を解決。話した内容とメンバーの反応をチャット風UIでサクサク入力・画像付き保存できるファン特化型メモアプリです。',
     features: [
@@ -78,7 +113,7 @@ const projectsData = {
     subtitle: 'ローカルLLM運用のためのリッチなGUIコントロールパネル',
     year: '2026',
     category: 'AI・対話',
-    accentColor: '#6366f1',
+    accentColor: '#4f46e5',
     icon: 'cpu',
     description: 'ターミナル操作が主となるOllamaを直感的に操作できるダッシュボード。モデルのパラメータ変更、コンテキスト長設定、レスポンス速度測定、プロンプトテンプレート管理を一元化します。',
     features: [
@@ -90,46 +125,12 @@ const projectsData = {
     demoUrl: '',
     githubUrl: 'https://github.com/toku0716'
   },
-  'macos-suite': {
-    title: 'macOS Native Utility Suite',
-    subtitle: 'Swiftによる軽量・高速・美しいデスクトップユーティリティ群',
-    year: '2025 - 2026',
-    category: 'MACOS NATIVE',
-    accentColor: '#3b82f6',
-    icon: 'layers',
-    description: 'AppleのHuman Interface Guidelinesを忠実に再現したmacOS専用アプリ群（ZipVault, Task Manager, Finder拡張, Video Player, Photo App）。SwiftUIとAppKitを組み合わせ、OS標準機能のように軽快で直感的な操作感を実現しています。',
-    features: [
-      'Macネイティブの高速レンダリングと省電力設計',
-      'Zip暗号化ボールト（mac_zip_vault）による安全なアーカイブ保管',
-      'プロセス監視とリソース最適化ユーティリティ（mac_task_manager）'
-    ],
-    techStack: ['Swift 6', 'SwiftUI', 'AppKit', 'Combine', 'macOS SDK'],
-    demoUrl: '',
-    githubUrl: 'https://github.com/toku0716'
-  },
-  'c-text-editor': {
-    title: 'C Text Editor & GUI',
-    subtitle: '低レイヤーメモリ管理とターミナルバッファを追求したエディタ',
-    year: '2025',
-    category: '低レイヤー / C',
-    accentColor: '#64748b',
-    icon: 'terminal',
-    description: 'VT100エスケープシーケンスによるターミナル生モード制御、ギャップバッファによる高速な文字列挿入・削除、低レイヤーのファイルI/Oを学究的かつ実用的に追求したプロジェクト。GUI版も併せて開発。',
-    features: [
-      '外部ライブラリゼロのピュアCによるポータブル設計',
-      '効率的なメモリギャップバッファによる大容量テキスト編集',
-      'ターミナルrawモードでのリアルタイムキーイベント捕捉'
-    ],
-    techStack: ['C99', 'POSIX APIs', 'Terminal VT100', 'Data Structures'],
-    demoUrl: '',
-    githubUrl: 'https://github.com/toku0716'
-  },
   'kids-sound-play': {
     title: 'Kids Sound Play (知育サウンドアプリ)',
     subtitle: '音と触覚で好奇心を刺激する幼児向けセーフティアプリ',
     year: '2025',
     category: 'WEB & アプリ',
-    accentColor: '#f59e0b',
+    accentColor: '#d97706',
     icon: 'sparkle',
     description: 'カラフルな図形やキャラクターをタップすることで、音階や楽しい効果音が鳴る知育アプリ。余計な広告や外部リンクを排除し、親御さんが安心して渡せる設計を追求しました。',
     features: [
@@ -193,7 +194,7 @@ function initTheme() {
    ========================================================================== */
 function initLinksFilter() {
   const filterButtons = document.querySelectorAll('[data-link-filter]');
-  const linkCards = document.querySelectorAll('.link-card');
+  const linkCards = document.querySelectorAll('.link-item, .link-card');
 
   filterButtons.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -220,7 +221,7 @@ function initWorksFilterAndSearch() {
   const categoryButtons = document.querySelectorAll('[data-work-filter]');
   const searchInput = document.getElementById('worksSearchInput');
   const searchClear = document.getElementById('worksSearchClear');
-  const workCards = document.querySelectorAll('.work-card');
+  const workCards = document.querySelectorAll('.work-cell, .work-card');
   const noResultsEl = document.getElementById('worksNoResults');
 
   let currentCategory = 'all';
@@ -302,7 +303,7 @@ function initModal() {
 
     if (modalIcon) {
       modalIcon.style.backgroundColor = data.accentColor;
-      const iconSvg = getIconSvg(data.icon, 28);
+      const iconSvg = getIconSvg(data.icon, 24);
       modalIcon.innerHTML = iconSvg;
     }
 
@@ -314,13 +315,13 @@ function initModal() {
 
     if (modalFeatures) {
       modalFeatures.innerHTML = data.features
-        .map((f) => `<li class="modal-feature-item"><span style="color:#10b981;font-weight:bold;">✓</span><span>${f}</span></li>`)
+        .map((f) => `<li class="modal-bullet-item"><span style="color:var(--accent-green);font-weight:bold;margin-right:4px;">✓</span><span>${f}</span></li>`)
         .join('');
     }
 
     if (modalTechTags) {
       modalTechTags.innerHTML = data.techStack
-        .map((t) => `<span class="modal-tech-tag">${t}</span>`)
+        .map((t) => `<span class="modal-tech-pill">${t}</span>`)
         .join('');
     }
 
@@ -353,10 +354,10 @@ function initModal() {
   }
 
   // Work card click listeners
-  document.querySelectorAll('.work-card').forEach((card) => {
+  document.querySelectorAll('.work-cell, .work-card').forEach((card) => {
     card.addEventListener('click', (e) => {
-      // Don't trigger modal if user directly clicked external link button inside card
-      if ((e.target).closest('.work-link-icon')) return;
+      // Don't trigger modal if user directly clicked external link icon button inside card
+      if ((e.target).closest('.icon-link-btn, .work-link-icon')) return;
       const projectId = card.getAttribute('data-project-id');
       if (projectId) openModal(projectId);
     });
@@ -436,8 +437,8 @@ function initClipboardAndShare() {
   if (shareBtn) {
     shareBtn.addEventListener('click', async () => {
       const shareData = {
-        title: 'Yuuki - Portfolio & Link Hub',
-        text: 'Yuukiのポートフォリオ兼リンク集サイトです。',
+        title: 'Yuuki | ZEN大学生・ソフトウェアエンジニア',
+        text: 'ZEN大学生・ソフトウェアエンジニアYuukiのポートフォリオ兼リンク集です。',
         url: window.location.href
       };
 
@@ -460,11 +461,11 @@ function initClipboardAndShare() {
    Navigation ScrollSpy
    ========================================================================== */
 function initScrollSpy() {
-  const sections = ['links', 'works', 'skills', 'about', 'contact'];
-  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = ['links', 'works', 'academic', 'skills', 'philosophy', 'contact'];
+  const navLinks = document.querySelectorAll('.nav-item, .nav-link');
 
   window.addEventListener('scroll', () => {
-    const scrollPos = window.scrollY + 220;
+    const scrollPos = window.scrollY + 200;
     for (const id of sections) {
       const el = document.getElementById(id);
       if (el) {
@@ -505,8 +506,7 @@ function getIconSvg(name, size = 20) {
     case 'terminal':
       return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>`;
     case 'sparkle':
-    case 'sparkles':
     default:
-      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>`;
+      return `<svg width="${size}" height="${size}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
   }
 }
