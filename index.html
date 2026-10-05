@@ -3,83 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Toku - 公式ページ</title>
-  <!-- Google Fonts: 落合陽一サイト公式と同一フォント -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500&family=Prompt:wght@200;300;400&display=swap" rel="stylesheet">
+  <title>Toku - ポートフォリオ</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Noto Serif JP"', 'serif'],
-            prompt: ['"Prompt"', 'sans-serif'],
-          },
-          letterSpacing: {
-            'ochiai': '0.5em',
-            'ochiai-heading': '0.3em',
-          }
-        }
-      }
+  <style>
+    /* 背景画像を画面全体に固定表示 */
+    body {
+      background-image: url('images/bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
     }
-  </script>
-  <link rel="stylesheet" href="css/style.css">
+  </style>
 </head>
-<body class="bg-black text-[#eeeeee] font-serif antialiased min-h-screen selection:bg-neutral-800 selection:text-white relative">
+<body class="min-h-screen text-neutral-100 font-sans antialiased flex flex-col justify-between p-4 sm:p-8 md:p-12 relative selection:bg-white selection:text-black">
 
-  <!-- 星空・スクロール連動レイヤー（デジタルネイチャーの微細な光） -->
-  <div class="stars-backdrop" aria-hidden="true">
-    <div class="star-layer layer-far"></div>
-    <div class="star-layer layer-mid"></div>
-    <div class="star-layer layer-near"></div>
-  </div>
+  <!-- 背景の暗幕オーバーレイ（写真の夜景の美しさを残しつつ文字を読みやすく） -->
+  <div class="fixed inset-0 bg-black/40 backdrop-blur-[2px] pointer-events-none" aria-hidden="true"></div>
 
-  <!-- 全体ラッパー -->
-  <div class="relative z-10 w-full min-h-screen flex flex-col justify-between">
+  <!-- メインコンテンツラッパー -->
+  <div class="relative z-10 w-full max-w-xl mx-auto my-auto py-10">
 
-    <!-- トップヘッダー / ナビゲーション -->
-    <header class="w-full px-6 py-6 sm:px-12 sm:py-8 flex justify-between items-center border-b border-[#232323]">
-      <a href="#" class="font-prompt font-light text-base sm:text-lg tracking-[0.1em] text-white hover:opacity-60 transition-opacity">Toku</a>
-      <p class="font-prompt font-light text-xs sm:text-xs text-neutral-400 tracking-[0.15em]">ZEN UNIVERSITY</p>
-    </header>
+    <!-- すりガラス調のシンプルカード -->
+    <main class="bg-neutral-950/75 backdrop-blur-xl border border-white/15 rounded-2xl p-6 sm:p-10 shadow-2xl space-y-8">
 
-    <!-- ファーストビュー（落合陽一サイト公式 top-header の再現） -->
-    <section class="w-full px-6 sm:px-16 md:px-24 py-20 sm:py-28 max-w-5xl mx-auto flex flex-col justify-center">
-      <h1 class="font-prompt font-light text-4xl sm:text-6xl text-white tracking-[0.05em] mb-4">Toku</h1>
-      <p class="font-prompt font-light text-sm sm:text-base text-neutral-400 tracking-[0.15em] mb-12">ZEN大学 知能情報社会学部 2年</p>
+      <!-- ヘッダー -->
+      <header class="border-b border-white/10 pb-6">
+        <h1 class="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-2">Toku</h1>
+        <p class="text-sm sm:text-base text-neutral-300 font-medium tracking-wide">ZEN大学 知能情報社会学部 2年</p>
+      </header>
 
-      <!-- 落合陽一公式特有の極小・超広字間メッセージ（文字をくっきり見やすく調整） -->
-      <div class="relative pt-6 border-t border-[#f3f3f3]/30 max-w-lg">
-        <p class="font-serif font-light text-sm sm:text-[15px] leading-[2.6] tracking-ochiai text-neutral-200">
-          情報と計算機，<br>
-          ことば，構成，<br>
-          2022年の模索から，<br>
-          2025年ZEN大学へ．
-        </p>
-      </div>
-
-      <div class="mt-16">
-        <a href="#content" class="inline-flex items-center text-xs font-prompt font-light tracking-[0.2em] text-neutral-400 hover:text-white transition-colors group">
-          <span>Explore</span>
-          <span class="ml-3 transform group-hover:translate-x-2 transition-transform duration-300">→</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- メインアーカイブセクション（落合陽一公式 biography-section の再現） -->
-    <main id="content" class="w-full max-w-5xl mx-auto px-6 sm:px-16 md:px-24 py-16 space-y-24">
-
-      <!-- 略歴 -->
-      <section class="relative pt-12 border-t border-[#232323]">
-        <div class="mb-10">
-          <h2 class="font-serif font-light text-2xl sm:text-3xl text-white tracking-ochiai-heading mb-1.5">略歴</h2>
-          <span class="font-prompt font-light text-xs text-neutral-500 tracking-[0.15em] block">BIOGRAPHY</span>
-        </div>
-
-        <div class="font-serif font-light text-[15px] sm:text-[16px] leading-[2.4] tracking-[0.08em] text-neutral-200 max-w-2xl space-y-6">
+      <!-- 私について -->
+      <section class="space-y-3">
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-400 uppercase">
+          私について
+        </h2>
+        <div class="text-neutral-200 text-sm sm:text-base leading-relaxed space-y-3 font-normal">
           <p>
             2022年に専門学校を卒業後、アルバイトを続けながら過ごしていました。
           </p>
@@ -90,37 +50,30 @@
       </section>
 
       <!-- リンク -->
-      <section class="relative pt-12 border-t border-[#232323]">
-        <div class="mb-10">
-          <h2 class="font-serif font-light text-2xl sm:text-3xl text-white tracking-ochiai-heading mb-1.5">リンク</h2>
-          <span class="font-prompt font-light text-xs text-neutral-500 tracking-[0.15em] block">LINKS</span>
-        </div>
-
-        <div class="w-full border-t border-[#232323] divide-y divide-[#232323]">
-          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="py-6 flex justify-between items-center group transition-opacity hover:opacity-60">
-            <span class="font-prompt font-light text-base sm:text-lg text-neutral-100 tracking-[0.08em]">GitHub</span>
-            <span class="font-prompt font-light text-xs sm:text-sm text-neutral-400 tracking-[0.05em] flex items-center gap-1.5 group-hover:text-white transition-colors">
-              github.com/toku0716
-              <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
-            </span>
+      <section class="space-y-3 pt-2 border-t border-white/10">
+        <h2 class="text-xs font-mono font-semibold tracking-wider text-neutral-400 uppercase">
+          リンク
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" 
+             class="flex justify-between items-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all group">
+            <span class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors">GitHub</span>
+            <span class="text-xs text-neutral-400 group-hover:text-white transition-colors">↗</span>
           </a>
 
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="py-6 flex justify-between items-center group transition-opacity hover:opacity-60">
-            <span class="font-prompt font-light text-base sm:text-lg text-neutral-100 tracking-[0.08em]">X (Twitter)</span>
-            <span class="font-prompt font-light text-xs sm:text-sm text-neutral-400 tracking-[0.05em] flex items-center gap-1.5 group-hover:text-white transition-colors">
-              x.com
-              <span class="transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform">↗</span>
-            </span>
+          <a href="https://x.com" target="_blank" rel="noopener noreferrer" 
+             class="flex justify-between items-center px-4 py-3 rounded-xl bg-white/5 border border-white/10 hover:border-white/30 hover:bg-white/10 transition-all group">
+            <span class="text-sm font-semibold text-white group-hover:text-sky-300 transition-colors">X (Twitter)</span>
+            <span class="text-xs text-neutral-400 group-hover:text-white transition-colors">↗</span>
           </a>
         </div>
       </section>
 
     </main>
 
-    <!-- フッター（落合陽一公式 top-footer の再現） -->
-    <footer class="w-full px-6 py-12 sm:px-16 md:px-24 max-w-5xl mx-auto border-t border-[#232323] mt-24 flex flex-col sm:flex-row justify-between items-center gap-4">
-      <p class="font-prompt font-light text-xs text-neutral-500 tracking-[0.1em]">© 2026 Toku</p>
-      <p class="font-prompt font-light text-xs text-neutral-600 tracking-[0.15em]">ZEN UNIVERSITY</p>
+    <!-- フッター -->
+    <footer class="mt-6 text-center text-xs text-white/70 drop-shadow">
+      <p>© 2026 Toku — ZEN UNIVERSITY</p>
     </footer>
 
   </div>
