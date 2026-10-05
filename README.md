@@ -1,25 +1,27 @@
 # Yuuki | Portfolio & Link Hub (ポートフォリオ兼リンク紹介サイト)
 
-モダンな 2026年デザイン基準のポートフォリオ兼リンク集（Link-in-bio）サイトです。  
-スマホ表示ではリンクツリーとして、PC表示ではリッチなBento Gridポートフォリオとして最適化されています。
+ピュアな **HTML / CSS / JavaScript** だけで構築された、超軽量・依存パッケージ不要のポートフォリオ兼リンク集（Link-in-bio）サイトです。  
+Node.js やビルドツール（Vite/Webpackなど）を介さずに、ブラウザで `index.html` を開くだけで即座に動作します。GitHub Pagesや各種静的ホスティング（Netlify, Vercel, Cloudflare Pagesなど）にもそのまま配備可能です。
 
 ---
 
 ## 🌟 主な特徴
 
+- **完全ピュア（No Dependencies / No Build Step）**:
+  - React やビルドツールに依存せず、ブラウザ標準の HTML5 / CSS3 / ES6+ のみで動作。
+  - 軽量・高速で外部ライブラリの脆弱性やバージョン互換性トラブルがありません。
 - **2-in-1 ハイブリッド構成**:
-  - **リンク集（Link Hub / Link-in-bio）**: X (旧Twitter)、GitHub、Zenn、Webアプリなどへのダイレクトリンク
-  - **ポートフォリオ（Featured Works）**: 制作実績（推しサポ、AITuber、macOSアプリ群、Cエディタ等）のショーケースとモーダル詳細
-- **データ一元管理**:
-  - `src/data/portfolioData.ts` を編集するだけで、SNSリンク・プロフィール・制作物・スキルを簡単に更新可能
-- **2026 Modern Design & Glassmorphism**:
-  - 洗練されたグラスモーフィズム、ダーク / ライトテーマ対応（LocalStorage保存）
-  - 各種リンクのワンクリックURLコピー＆トースト通知
-  - Web Share API対応のサイト共有機能
-  - カテゴリ絞り込み & キーワードリアルタイム検索
-- **超軽量・超高速ビルド**:
-  - React 19 + TypeScript + Vite 8 + Tailwind CSS v4 (@tailwindcss/vite)
-  - ゼロ警告・ゼロエラーの厳格な型安全と最適化バンドル（Gzip時 約86KB）
+  - **リンク集（Link in Bio）**: X（旧Twitter）、GitHub、Zenn、Webアプリなどへのダイレクトリンクカード。
+  - **制作物ショーケース（Featured Works）**: 実際のプロダクト（推しサポ、AITuber App、DevBrowser、macOSアプリ群、C言語エディタなど）のBento Gridギャラリー。
+- **リッチなインタラクティブ機能**:
+  - **作品詳細モーダル**: カードをクリックすると、特徴リスト・技術スタック・リンクを表示。
+  - **キーワード検索 & カテゴリ絞り込み**: リアルタイムで作品をフィルタリング。
+  - **ワンクリックURLコピー**: リンクやメールアドレスをクリップボードにコピーし、トースト通知を表示。
+  - **サイト共有**: スマートフォンや対応ブラウザでの Web Share API 呼び出しに対応。
+  - **ダーク / ライトテーマ**: トグルボタンで切り替え可能（LocalStorageに自動保存）。
+  - **ナビゲーション追従**: スクロール位置に応じたアクティブリンクの自動ハイライト。
+- **2026 Modern Design**:
+  - 美しいグラスモーフィズム（すりガラス効果）、滑らかなアニメーション、アンビエントグラデーション。
 
 ---
 
@@ -27,55 +29,36 @@
 
 ```text
 My_portfoliosite/
-├── index.html                 # メタデータ・ファビコン設定
-├── package.json               # 依存関係
-├── vite.config.ts             # Vite + Tailwind CSS設定
-├── src/
-│   ├── types.ts               # 型定義（Profile, Project, Link, Skill）
-│   ├── data/
-│   │   └── portfolioData.ts   # プロフィール・リンク・作品の一括設定ファイル
-│   ├── components/
-│   │   ├── Header.tsx         # ナビゲーションバー・テーマ切替・共有
-│   │   ├── ProfileHero.tsx    # アバター・ステータス・概要
-│   │   ├── LinkHub.tsx        # リンク集カード
-│   │   ├── WorksSection.tsx   # 制作実績（検索・カテゴリ分類・カード）
-│   │   ├── ProjectModal.tsx   # 作品詳細モーダル
-│   │   ├── SkillsSection.tsx  # スキル一覧
-│   │   ├── AboutSection.tsx   # 理念・メッセージ
-│   │   ├── ContactSection.tsx # お問い合わせ・メールコピー
-│   │   ├── Footer.tsx         # フッター
-│   │   ├── Toast.tsx          # 通知トースト
-│   │   └── Icons.tsx          # SVGアイコン
-│   ├── App.tsx                # メインページ
-│   ├── index.css              # Tailwind CSS & スタイル
-│   └── main.tsx               # エントリーポイント
+├── index.html       # 全ページの骨格・コンテンツ・セクション構成
+├── css/
+│   └── style.css    # グラスモーフィズム・レスポンシブ・ダークテーマ等のCSS
+├── js/
+│   └── script.js    # テーマ切替・検索・フィルタ・モーダル・コピー処理
+└── README.md        # プロジェクト説明書
 ```
 
 ---
 
 ## ⚙️ データのカスタマイズ方法
 
-`src/data/portfolioData.ts` を開くだけで、以下の内容を直感的に書き換えることができます：
+### 1. 作品の詳細やリンクの変更 (`js/script.js`)
+`js/script.js` の先頭にある `projectsData` オブジェクトから、モーダルに表示される詳細情報（タイトル、概要、特徴、使用技術、URLなど）を直接書き換えられます。
 
-1. **`userProfile`**: お名前、自己紹介、肩書き、メールアドレス、ステータス
-2. **`socialLinks`**: SNSリンク、ブログURL、アイコン、バッジ
-3. **`projects`**: 制作したアプリのタイトル、概要、詳細、タグ、リンク（GitHub/デモ）
-4. **`skillCategories`**: フロントエンド、macOS/Swift、AI/バックエンドのスキル
+### 2. リンクカードやプロフィールの変更 (`index.html`)
+`index.html` 内のテキストやURLを変更するだけで反映されます：
+- プロフィール情報: `<section class="hero-section">`
+- リンク集カード: `<section id="links">` 内の `<a class="link-card">`
+- 制作物カード: `<section id="works">` 内の `<div class="work-card">`
+- スキル一覧: `<section id="skills">`
+- 理念・メッセージ: `<section id="about">`
+- お問い合わせメール: `<section id="contact">`
 
 ---
 
-## 🚀 コマンド一覧
+## 🚀 使い方
 
+ブラウザで `index.html` を直接ダブルクリックして開くか、お好みの静的Webサーバーでお使いいただけます。
 ```bash
-# 開発サーバー起動（※ご指示により現在は未起動）
-npm run dev
-
-# 本番用ビルド（dist/ を出力）
-npm run build
-
-# ビルド成果物のローカルプレビュー
-npm run preview
-
-# 静的コードチェック
-npm run lint
+# 例: macOS標準の簡易サーバー（必要な場合のみ）
+python3 -m http.server 8000
 ```
