@@ -3,111 +3,308 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuuki - ZEN大学生 / ソフトウェアエンジニア</title>
-  <meta name="description" content="ZEN大学（知能情報社会学部）在籍のソフトウェアエンジニアYuukiのポートフォリオ。">
+  <title>Toku (Yuuki) - Portfolio | ZEN大学 知能情報社会学部</title>
+  <meta name="description" content="ZEN大学（知能情報社会学部 2年生）Tokuのポートフォリオ。AI・情報科学の学修、磁石祭ZERO台本担当、ローカルファースト開発の歩み。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <div class="wrapper">
+  <div class="screen-layout">
 
-    <!-- Header / Identity -->
-    <header class="page-header">
-      <span class="badge">ZEN大学 知能情報社会学部 在籍</span>
-      <h1 class="page-title">Yuuki</h1>
-      <p class="page-subtitle">ZEN大学生 / ソフトウェアエンジニア</p>
-    </header>
+    <!-- Left Panel: Profile / Identity / Quick Overview (Sticky) -->
+    <aside class="sidebar">
+      <div class="sidebar-inner">
 
-    <main>
-      <!-- About -->
-      <section class="section">
-        <h2>About / 自己紹介</h2>
-        <p>
-          日本初の本格的オンライン大学である<strong>ZEN大学（知能情報社会学部）</strong>に在籍しながら、ソフトウェア開発を行っている学生エンジニアです。
-        </p>
-        <p>
-          大学で数理・情報科学・社会ネットワークの基盤理論を学びつつ、Webフロントエンド（TypeScript/React）やmacOSネイティブアプリ（Swift）、低レイヤーC言語、ローカルAI連携など幅広い技術に触れています。
-        </p>
-        <p>
-          クラウドにデータを過度に預けず、使う人の手元の端末で安全かつ高速に動作する「ローカルファースト（Local-First）」な道具づくりを重視しています。
-        </p>
-      </section>
+        <div class="profile-header">
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            <span>ZEN大学 2025年4月期生 在籍</span>
+          </div>
 
-      <!-- Portfolio / Representative Works -->
-      <section class="section">
-        <h2>Portfolio / 制作・研究探究</h2>
+          <h1 class="profile-name">Toku <span class="profile-subname">/ Yuuki</span></h1>
+          <p class="profile-role">ZEN大学 知能情報社会学部 2年生<br>ソフトウェアエンジニア & クリエイター</p>
+        </div>
 
-        <article class="project-entry">
-          <h3>macOS Native Utility Suite</h3>
-          <p class="project-meta">デスクトップアプリケーション / Swift 6, SwiftUI, AppKit</p>
-          <p>
-            Apple Human Interface Guidelinesに準拠したネイティブデスクトップユーティリティ群（暗号化ローカル保管庫、タスク管理、Finder拡張等）。OS標準APIを活用し、最小限のメモリフットプリントと高速レスポンスを追求しています。
-          </p>
-        </article>
+        <div class="profile-quote">
+          <blockquote>
+            「専門学校からアルバイトを経て、AIと情報科学を求めてZEN大学へ。自律的な探究と、手元で動く確かな道具づくり。」
+          </blockquote>
+        </div>
 
-        <article class="project-entry">
-          <h3>C Text Editor (Terminal & POSIX)</h3>
-          <p class="project-meta">システムプログラミング / C99, POSIX</p>
-          <p>
-            外部ライブラリに依存せず、C言語によるメモリ管理、ギャップバッファ構造、VT100ターミナルrawモード制御を深く掘り下げたテキストエディタの実装。低レイヤーの入出力とデータ構造の探究。
-          </p>
-        </article>
+        <nav class="sidebar-nav">
+          <a href="#about" class="nav-link">私について</a>
+          <a href="#journey" class="nav-link">歩み・年表</a>
+          <a href="#focus" class="nav-link">探究分野 & 姿勢</a>
+          <a href="#projects" class="nav-link">制作・研究探究</a>
+          <a href="#skills" class="nav-link">技術スタック</a>
+          <a href="#links" class="nav-link">公式リンク</a>
+        </nav>
 
-        <article class="project-entry">
-          <h3>DevBrowser</h3>
-          <p class="project-meta">開発者向けツール / TypeScript, Electron</p>
-          <p>
-            モバイルとデスクトップ画面を1画面内で同時スクロール・イベント同期検証できるレスポンシブWeb検証用ブラウザ。
-          </p>
-        </article>
-      </section>
+        <div class="sidebar-meta-list">
+          <div class="meta-row">
+            <span class="meta-label">所属</span>
+            <span class="meta-val">ZEN大学 知能情報社会学部 2年</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">入学</span>
+            <span class="meta-val">2025年4月（1期生）</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">経歴</span>
+            <span class="meta-val">2022年 専門学校卒</span>
+          </div>
+          <div class="meta-row">
+            <span class="meta-label">課外活動</span>
+            <span class="meta-val">「磁石祭ZERO」番組台本担当</span>
+          </div>
+        </div>
 
-      <!-- Skills -->
-      <section class="section">
-        <h2>Technical Skills / 技術スタック</h2>
-        <table class="skills-table">
-          <tr>
-            <th>Frontend & Web</th>
-            <td>TypeScript, JavaScript, React 19, Next.js, Tailwind CSS, Vite, PWA, IndexedDB, WebRTC</td>
-          </tr>
-          <tr>
-            <th>macOS & Native</th>
-            <td>Swift 6, SwiftUI, AppKit, Combine, Apple Human Interface Guidelines, Xcode</td>
-          </tr>
-          <tr>
-            <th>Systems & AI</th>
-            <td>C99 (POSIX), Python, Local LLM (Ollama), Git, GitHub</td>
-          </tr>
-        </table>
-      </section>
+        <div class="sidebar-footer">
+          <p class="copyright">© 2026 Toku — All rights reserved.</p>
+        </div>
 
-      <!-- Links -->
-      <section class="section">
-        <h2>Links / 公式リンク</h2>
-        <ul class="links-list">
-          <li>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer">https://github.com/toku0716</a>
-            <span class="desc-faint">— 各種制作物のソースコード・コミット履歴</span>
-          </li>
-          <li>
-            <strong>X (旧Twitter):</strong>
-            <a href="https://x.com" target="_blank" rel="noopener noreferrer">https://x.com</a>
-            <span class="desc-faint">— ZEN大学での学びや日々の開発進捗</span>
-          </li>
-          <li>
-            <strong>技術記事 (Zenn / Qiita):</strong>
-            <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer">https://zenn.dev</a>
-            <span class="desc-faint">— SwiftやTypeScriptの実装知見・技術メモ</span>
-          </li>
-        </ul>
-      </section>
+      </div>
+    </aside>
+
+    <!-- Right Panel: Main Content (Fluid, Full Screen) -->
+    <main class="main-content">
+      <div class="content-container">
+
+        <!-- Section 1: About Me -->
+        <section id="about" class="content-section">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">私について</h2>
+
+          <div class="about-lead-box">
+            <p class="lead-text">
+              2022年に専門学校を卒業後、アルバイトを続けながら自身のキャリアを模索する中で、「これからの時代に不可欠なAIや情報技術を本格的に大学で学び直したい」という強い熱意を抱き、2025年4月に開学した<strong>ZEN大学（知能情報社会学部）</strong>へ入学しました。
+            </p>
+          </div>
+
+          <div class="prose">
+            <p>
+              日本初の本格的オンライン大学であるZEN大学では、時間と場所にとらわれない自律的な学修環境を活かし、基礎数理や情報科学、AIの理論・実践に打ち込んでいます。
+            </p>
+            <p>
+              また、技術を学ぶだけでなく、ZEN大学初の文化祭である<strong>「磁石祭ZERO」</strong>では番組台本の執筆を担当しました。企画を練り、構成を組み立て、言葉を通じて人々に想いや熱量を届けるコンテンツ制作・チーム協働の経験も培っています。
+            </p>
+            <p>
+              ソフトウェア開発においては、クラウドにデータを預けすぎず、使う人の手元の端末で安全かつ快適に動く「ローカルファースト」なツール設計や、OSの標準機能を活かした無駄のないプログラミングを大切にしています。
+            </p>
+          </div>
+        </section>
+
+        <!-- Section 2: Journey / Milestones -->
+        <section id="journey" class="content-section">
+          <div class="section-tag">Journey & Milestones</div>
+          <h2 class="section-title">これまでの歩み</h2>
+
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-time">2022年 3月</div>
+              <div class="timeline-body">
+                <h3>専門学校 卒業</h3>
+                <p>専門学校を卒業。就職活動で紆余曲折を経験しながらも、アルバイトを続けつつ自学自習でプログラミングやIT技術への探究を継続。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-time">2024年</div>
+              <div class="timeline-body">
+                <h3>ZEN大学 開学の発表とAI探究の志</h3>
+                <p>日本初の本格オンライン大学「ZEN大学」の設置認可・開学を知る。「独学にとどまらず、最先端のAI・情報科学を体系的に大学で学び直したい」と一念発起し、入学を決意。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-time">2025年 4月</div>
+              <div class="timeline-body">
+                <h3>ZEN大学 知能情報社会学部 入学（1期生）</h3>
+                <p>情報基盤理論、データサイエンス、AI概論などの学修を本格始動。自律的なタイムマネジメントのもと、大学の学びとソフトウェア開発の往復を開始。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <div class="timeline-time">2025年</div>
+              <div class="timeline-body">
+                <h3>ZEN大学 初の文化祭「磁石祭ZERO」番組台本を担当</h3>
+                <p>大学の歴史の始まりとなる初代文化祭にて、配信番組の台本・シナリオ執筆を担当。構成力とクリエイティブな表現力を発揮し、オンラインを通じた仲間との協働を実現。</p>
+              </div>
+            </div>
+
+            <div class="timeline-item current">
+              <div class="timeline-time">2026年（現在）</div>
+              <div class="timeline-body">
+                <h3>大学2年生 / 学修の深化とソフトウェア開発</h3>
+                <p>知能情報科学の専門分野を学び進めるとともに、Swift/macOSネイティブアプリや低レイヤーC言語、ローカルAI活用など多角的な道具づくりを展開中。</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 3: Focus & Values -->
+        <section id="focus" class="content-section">
+          <div class="section-tag">Focus & Values</div>
+          <h2 class="section-title">探究の柱と大切にしている姿勢</h2>
+
+          <div class="grid-3">
+            <div class="card">
+              <div class="card-icon">🧠</div>
+              <h3 class="card-title">知能情報科学 & AI探究</h3>
+              <p class="card-desc">
+                AIをただの流行のツールとして使うのではなく、背後にある数理モデルや情報理論を大学で体系的に学び、ローカルLLM連携や実務的な課題解決に活かします。
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">💻</div>
+              <h3 class="card-title">ローカルファーストな道具づくり</h3>
+              <p class="card-desc">
+                外部サーバーに個人データを過剰に委ねず、端末内（IndexedDBやローカルファイル）で高速・安全に動作するプライバシー保護志向のソフトウェアを志向します。
+              </p>
+            </div>
+
+            <div class="card">
+              <div class="card-icon">✍️</div>
+              <h3 class="card-title">言葉と構成力・伝える力</h3>
+              <p class="card-desc">
+                「磁石祭ZERO」での番組台本執筆のように、コードを書くことと同じくらい「何をどう伝えるか」「どうすれば人に届くか」を考え抜くストーリーテリングを重視します。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 4: Projects & Research -->
+        <section id="projects" class="content-section">
+          <div class="section-tag">Selected Projects</div>
+          <h2 class="section-title">制作・研究探究</h2>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <div class="project-badge">Native App</div>
+              <h3 class="project-title">macOS Native Utility Suite</h3>
+              <p class="project-tech">Swift 6 / SwiftUI / AppKit</p>
+              <p class="project-desc">
+                Apple Human Interface Guidelinesに準拠したデスクトップユーティリティ群（暗号化ローカル保管庫、タスク管理、Finder拡張等）。OS標準APIを活用し、最小限のメモリフットプリントとネイティブならではの快適なレスポンスを追求。
+              </p>
+            </article>
+
+            <article class="project-card">
+              <div class="project-badge">Systems</div>
+              <h3 class="project-title">C Text Editor (Terminal & POSIX)</h3>
+              <p class="project-tech">C99 / POSIX Terminal API</p>
+              <p class="project-desc">
+                外部サードパーティライブラリに一切依存せず、C言語ピュア実装によるメモリ管理、ギャップバッファ、VT100ターミナルrawモード制御を深く掘り下げたテキストエディタ。低レイヤーの入出力とデータ構造の探究。
+              </p>
+            </article>
+
+            <article class="project-card">
+              <div class="project-badge">Developer Tool</div>
+              <h3 class="project-title">DevBrowser</h3>
+              <p class="project-tech">TypeScript / Electron / Webview</p>
+              <p class="project-desc">
+                モバイルとデスクトップ画面を1画面内で同時スクロール・イベント同期検証できるレスポンシブWeb検証用ブラウザ。開発者視点での作業効率化ツール。
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <!-- Section 5: Technical Skills -->
+        <section id="skills" class="content-section">
+          <div class="section-tag">Technical Skills</div>
+          <h2 class="section-title">技術スタック</h2>
+
+          <div class="skills-wrapper">
+            <div class="skill-category">
+              <h3 class="category-name">Frontend & Web</h3>
+              <ul class="skill-tags">
+                <li>TypeScript</li>
+                <li>JavaScript (ES6+)</li>
+                <li>React 19</li>
+                <li>Next.js</li>
+                <li>HTML5 / CSS3</li>
+                <li>Tailwind CSS</li>
+                <li>Vite</li>
+                <li>PWA</li>
+                <li>IndexedDB</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="category-name">macOS & Native</h3>
+              <ul class="skill-tags">
+                <li>Swift 6</li>
+                <li>SwiftUI</li>
+                <li>AppKit</li>
+                <li>Combine</li>
+                <li>Apple HIG</li>
+                <li>Xcode</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="category-name">Systems & AI</h3>
+              <ul class="skill-tags">
+                <li>C99 (POSIX)</li>
+                <li>Python</li>
+                <li>Local LLM (Ollama)</li>
+                <li>Git</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+
+            <div class="skill-category">
+              <h3 class="category-name">Creative & Writing</h3>
+              <ul class="skill-tags">
+                <li>番組台本・シナリオ執筆</li>
+                <li>企画構成</li>
+                <li>Markdown技術文書</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Section 6: Official Links -->
+        <section id="links" class="content-section">
+          <div class="section-tag">Links</div>
+          <h2 class="section-title">公式リンク</h2>
+
+          <div class="links-grid">
+            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-card">
+              <div class="link-header">
+                <span class="link-name">GitHub</span>
+                <span class="link-arrow">↗</span>
+              </div>
+              <p class="link-url">https://github.com/toku0716</p>
+              <p class="link-desc">各種オープンソースコード、コミット履歴、学習リポジトリ</p>
+            </a>
+
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-card">
+              <div class="link-header">
+                <span class="link-name">X (旧Twitter)</span>
+                <span class="link-arrow">↗</span>
+              </div>
+              <p class="link-url">https://x.com</p>
+              <p class="link-desc">ZEN大学での日々の学修記録、開発の進捗ログ</p>
+            </a>
+
+            <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer" class="link-card">
+              <div class="link-header">
+                <span class="link-name">技術記事 (Zenn / Qiita)</span>
+                <span class="link-arrow">↗</span>
+              </div>
+              <p class="link-url">https://zenn.dev</p>
+              <p class="link-desc">Swift、TypeScript、C言語等の実装知見・技術アウトプット</p>
+            </a>
+          </div>
+        </section>
+
+        <footer class="content-footer">
+          <p>© 2026 Toku (Yuuki) — ZEN大学 知能情報社会学部 2年生</p>
+        </footer>
+
+      </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="page-footer">
-      <p>© 2026 Yuuki — ZEN大学 知能情報社会学部</p>
-    </footer>
 
   </div>
 
