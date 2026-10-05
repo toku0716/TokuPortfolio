@@ -122,128 +122,82 @@
                         Work
                     </h2>
                 </div>
-                <span class="text-xs font-mono text-gray-400">4 Projects</span>
             </div>
 
             <!-- プロジェクト一覧（2x2 グリッドレイアウト） -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
                 <!-- 01: 推しサポ (アプリ版) -->
-                <div class="project-card flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-start">
-                            <span class="text-xs font-mono text-gray-400">01</span>
-                            <span class="tag-badge">Flutter / Dart</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
-                                推しサポ（アプリ版）
-                            </h3>
-                            <p class="text-xs font-mono text-gray-400 mt-1">iOS & Android App</p>
-                        </div>
+                <div class="project-card flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-xs font-mono text-gray-400">01</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            推しサポ（アプリ版）
+                        </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            推し活総合サポートモバイルアプリケーション。推しの情報管理、イベント予定カレンダー、グッズ管理や購入金額集計などをネイティブ対応。
+                            推しの情報管理、イベント予定カレンダー、グッズの購入記録などを管理できるモバイルアプリ。
                         </p>
-                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Flutter</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Dart</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Firebase Auth</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Cloud Firestore</span>
-                        </div>
                     </div>
-                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
-                        <span>Mobile Native</span>
-                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Flutter</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Dart</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Firebase</span>
                     </div>
                 </div>
 
                 <!-- 02: 推しサポ Web版 (PWA) -->
-                <div class="project-card flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-start">
-                            <span class="text-xs font-mono text-gray-400">02</span>
-                            <span class="tag-badge">React 19 / TypeScript</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
-                                推しサポ Web版（PWA）
-                            </h3>
-                            <p class="text-xs font-mono text-gray-400 mt-1">Progressive Web App</p>
-                        </div>
+                <div class="project-card flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-xs font-mono text-gray-400">02</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            推しサポ Web版（PWA）
+                        </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            推しサポのWeb / PWA版。Service Workerによるオフライン動作やインストールに対応し、IndexedDBを活用した完全端末内ローカル保存を実現。
+                            推しサポのWeb / PWA版。ブラウザや端末へのインストールに対応し、ローカル環境でデータ管理が可能。
                         </p>
-                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">React 19</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">TypeScript</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Tailwind CSS v4</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Vite PWA</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">IndexedDB (idb)</span>
-                        </div>
                     </div>
-                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
-                        <span>Web App / PWA</span>
-                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">React</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">TypeScript</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">PWA</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">IndexedDB</span>
                     </div>
                 </div>
 
                 <!-- 03: AI VTuber システム -->
-                <div class="project-card flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-start">
-                            <span class="text-xs font-mono text-gray-400">03</span>
-                            <span class="tag-badge">Python / PyTorch</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
-                                AI VTuber システム
-                            </h3>
-                            <p class="text-xs font-mono text-gray-400 mt-1">Autonomous Interactive Streamer</p>
-                        </div>
+                <div class="project-card flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-xs font-mono text-gray-400">03</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            AI VTuber システム
+                        </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            YouTubeライブ配信とOBS連携に対応した自律対話型AI VTuberシステム。PyTorchによる長期ニューラル記憶、Ollama/Gemini連携、VOICEVOX音声排他制御を構築。
+                            YouTubeライブ配信やOBSと連携する自律対話型配信システム。PyTorchやLLM、音声合成を組み合わせて構築。
                         </p>
-                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Python</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">PyTorch</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Ollama (Gemma / LLaMA)</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Gemini API</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">VOICEVOX</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">SQLite</span>
-                        </div>
                     </div>
-                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
-                        <span>AI / Neural System</span>
-                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Python</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">PyTorch</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">LLM (Gemini / Ollama)</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">VOICEVOX</span>
                     </div>
                 </div>
 
                 <!-- 04: ポートフォリオサイト -->
-                <div class="project-card flex flex-col justify-between group">
-                    <div class="space-y-4">
-                        <div class="flex justify-between items-start">
-                            <span class="text-xs font-mono text-gray-400">04</span>
-                            <span class="tag-badge">Three.js / WebGL</span>
-                        </div>
-                        <div>
-                            <h3 class="text-2xl font-bold text-white group-hover:text-gray-200 transition-colors">
-                                ポートフォリオサイト
-                            </h3>
-                            <p class="text-xs font-mono text-gray-400 mt-1">This Website</p>
-                        </div>
+                <div class="project-card flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <div class="text-xs font-mono text-gray-400">04</div>
+                        <h3 class="text-xl sm:text-2xl font-bold text-white">
+                            ポートフォリオサイト
+                        </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            AI対話駆動開発（AI Pair Programming）により、要件定義から実装・最適化までをシームレスに構築。Three.jsによる白の深宇宙スターフィールド演出を搭載。
+                            自身の制作物や取り組んでいる技術をまとめたポートフォリオサイト。Three.jsによる背景演出を実装。
                         </p>
-                        <div class="flex flex-wrap gap-2 pt-2 text-xs font-mono text-gray-300">
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">JavaScript (ES6+)</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Three.js (WebGL)</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Tailwind CSS</span>
-                            <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">AI対話駆動開発</span>
-                        </div>
                     </div>
-                    <div class="pt-6 border-t border-white/10 mt-6 flex justify-between items-center text-xs font-mono text-gray-400">
-                        <span>Creative WebGL</span>
-                        <span class="text-white group-hover:translate-x-1 transition-transform">→</span>
+                    <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">JavaScript</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Three.js</span>
+                        <span class="px-2 py-0.5 bg-white/5 rounded border border-white/10">Tailwind CSS</span>
                     </div>
                 </div>
 
