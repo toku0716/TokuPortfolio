@@ -3,417 +3,139 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yuuki | ポートフォリオ（ZEN大学生・ソフトウェアエンジニア）</title>
-  <meta name="description" content="ZEN大学（知能情報社会学部）在籍のソフトウェアエンジニアYuukiの公式ポートフォリオ。思考プロセス、技術設計、代表制作物のケーススタディ、学問と実践の記録。">
-
-  <!-- Favicon SVG -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230f172a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='m7 7 5 5-5 5'/><path d='M13 17h4'/></svg>">
-
-  <!-- Stylesheet -->
+  <title>Yuuki - ZEN大学生 / ソフトウェアエンジニア</title>
+  <meta name="description" content="ZEN大学（知能情報社会学部）在籍のソフトウェアエンジニアYuukiのポートフォリオ。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- Subtle Architectural Grid Background -->
-  <div class="bg-grid-pattern"></div>
+  <div class="wrapper">
 
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand-area">
-        <div class="brand-avatar">Y</div>
-        <div class="brand-info">
-          <span class="brand-name">Yuuki</span>
-          <span class="brand-tag">ZEN UNIV. / PORTFOLIO</span>
-        </div>
-      </div>
+    <!-- Header / Identity -->
+    <header class="page-header">
+      <span class="badge">ZEN大学 知能情報社会学部 在籍</span>
+      <h1 class="page-title">Yuuki</h1>
+      <p class="page-subtitle">ZEN大学生 / ソフトウェアエンジニア</p>
+    </header>
 
-      <nav class="nav-links">
-        <a href="#about" class="nav-item">自己紹介</a>
-        <a href="#casestudy" class="nav-item">代表実績</a>
-        <a href="#academic" class="nav-item">ZEN大学での学び</a>
-        <a href="#skills" class="nav-item">技術スタック</a>
-        <a href="#links" class="nav-item">公式リンク</a>
-      </nav>
-
-      <!-- Controls -->
-      <div class="header-actions">
-        <button id="shareBtn" class="control-btn" aria-label="共有" title="サイトURLを共有 / コピー">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"/><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"/></svg>
-        </button>
-
-        <button id="themeToggleBtn" class="control-btn" aria-label="テーマ切替" title="ダーク / ライトテーマ切替">
-          <!-- Sun Icon (Dark Mode) -->
-          <svg id="sunIcon" style="display:none;" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-          <!-- Moon Icon (Light Mode) -->
-          <svg id="moonIcon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </button>
-      </div>
-    </div>
-  </header>
-
-  <!-- Main Content -->
-  <main class="main-content">
-    <div class="container-narrow">
-
-      <!-- Hero / Identity Section -->
-      <section id="about" class="hero-block">
-        <div class="hero-top-row">
-          <!-- ZEN University Official Affiliation Badge -->
-          <span class="zen-univ-badge">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            ZEN大学 知能情報社会学部 在籍
-          </span>
-
-          <span class="status-pill">
-            <span class="status-indicator"></span>
-            PORTFOLIO 2026
-          </span>
-        </div>
-
-        <h1 class="hero-headline">
-          Yuuki <span class="hero-name-faint">(ゆうき)</span>
-        </h1>
-        <p class="hero-subhead">
-          ZEN大学生 / ソフトウェアエンジニア
+    <main>
+      <!-- About -->
+      <section class="section">
+        <h2>About / 自己紹介</h2>
+        <p>
+          日本初の本格的オンライン大学である<strong>ZEN大学（知能情報社会学部）</strong>に在籍しながら、ソフトウェア開発を行っている学生エンジニアです。
         </p>
-
-        <p class="hero-lead">
-          <strong>「なぜ作るのか」「どのように課題を解決したのか」</strong>という思考プロセスと技術設計を可視化したポートフォリオです。
+        <p>
+          大学で数理・情報科学・社会ネットワークの基盤理論を学びつつ、Webフロントエンド（TypeScript/React）やmacOSネイティブアプリ（Swift）、低レイヤーC言語、ローカルAI連携など幅広い技術に触れています。
         </p>
-
-        <p class="hero-description">
-          ZEN大学（知能情報社会学部）で情報科学と社会基盤を学修しながら、Webフロントエンド（TypeScript/React）、macOSネイティブ（Swift）、低レイヤーC言語などの自律的なプロダクト開発を行っています。
-          クラウドへの過度な依存や無駄なネットワーク遅延を排し、端末ローカルで安全かつ心地よく機能するソフトウェアアーキテクチャを追求しています。
+        <p>
+          クラウドにデータを過度に預けず、使う人の手元の端末で安全かつ高速に動作する「ローカルファースト（Local-First）」な道具づくりを重視しています。
         </p>
-
-        <div class="hero-meta-grid">
-          <div class="meta-item">
-            <span class="meta-k">大学</span>
-            <span class="meta-v">ZEN大学（知能情報社会学部）</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-k">専門領域</span>
-            <span class="meta-v">Webフロントエンド / macOS Native / ローカルファースト</span>
-          </div>
-          <div class="meta-item">
-            <span class="meta-k">設計思想</span>
-            <span class="meta-v">Privacy by Design（端末内完結・P2P直接通信）</span>
-          </div>
-        </div>
       </section>
 
-      <!-- Case Study / 代表制作物の設計プロセス（ポートフォリオの核心） -->
-      <section id="casestudy" class="content-block">
-        <div class="block-header">
-          <span class="mono-label">[ CASE STUDY / REPRESENTATIVE WORK ]</span>
-          <h2 class="block-title">代表実績の思考プロセスと技術設計</h2>
-          <p class="block-desc">課題発見からアーキテクチャ設計、技術選定、実装までのプロセスです。</p>
-        </div>
+      <!-- Portfolio / Representative Works -->
+      <section class="section">
+        <h2>Portfolio / 制作実績</h2>
 
-        <!-- Case Study Card: Oshiss Web -->
-        <article class="case-card">
-          <div class="case-badge-row">
-            <span class="case-tag">WEB APPLICATION</span>
-            <span class="case-year">2026</span>
-          </div>
-
-          <h3 class="case-title">推しサポ (Oshiss / Oshiss-Web)</h3>
-          <p class="case-subtitle">完全端末内保存・P2P直接同期の推し活総合支援アプリ</p>
-
-          <!-- 1. Background & Problem -->
-          <div class="process-section">
-            <div class="process-title">
-              <span class="process-step">01</span>
-              <span>課題の発見・背景（Why）</span>
-            </div>
-            <p class="process-desc">
-              ファン活動（推し活）における予定、購入グッズの金額、ファンレターや感想メモは、ユーザーにとって非常にパーソナルで大切なデータです。しかし既存サービスの多くは、ユーザーの嗜好データをクラウドサーバー上に保管・解析する仕様であり、「個人の趣味データを誰にも見られず、安全に保管したい」「サービス終了やデータ漏洩に怯えたくない」という根本的な不安が存在していました。
-            </p>
-          </div>
-
-          <!-- 2. Architecture & Tech Selection -->
-          <div class="process-section">
-            <div class="process-title">
-              <span class="process-step">02</span>
-              <span>技術選定とアーキテクチャ設計（How）</span>
-            </div>
-            <p class="process-desc">
-              「サーバー送信ゼロ」を絶対条件とした<strong>ローカルファースト（Local-First）設計</strong>を採用しました。
-            </p>
-            <ul class="process-list">
-              <li>
-                <strong>ブラウザ内完結ストレージ（IndexedDB）:</strong>
-                大容量かつ構造化されたデータを端末内にのみ自動保存。通信環境がないオフライン状態でも完全に動作します。
-              </li>
-              <li>
-                <strong>WebRTC（PeerJS）による端末間直接同期:</strong>
-                「スマホとPCの両方でデータを使いたい」という要求に対し、中継サーバーにデータを保存せず、6桁のワンタイム暗号化コードを用いてブラウザ同士が直接P2P暗号化通信で引き継ぎを行う仕組みを実装。
-              </li>
-              <li>
-                <strong>PWA（Progressive Web App）:</strong>
-                インストール不要でネイティブアプリ並みの軽快な起動とオフラインキャッシュを提供。
-              </li>
-            </ul>
-          </div>
-
-          <!-- 3. Technical Challenge & Craftsmanship -->
-          <div class="process-section">
-            <div class="process-title">
-              <span class="process-step">03</span>
-              <span>技術的挑戦と工夫（Craftsmanship）</span>
-            </div>
-            <p class="process-desc">
-              データの完全な整合性を保つため、JSONファイルによる安全な手動バックアップ・復元機構と自動スナップショットを設計。さらに2026年基準のユーザー体験として、不要なオタクスラングの押し付けを排した中立的で優しいUI表現や、ダーク/ライトモードの精密な文字同化防止コントラスト調整を施しました。
-            </p>
-          </div>
-
-          <!-- Tech Stack Tags -->
-          <div class="case-tech-row">
-            <span class="tech-chip">React 19</span>
-            <span class="tech-chip">TypeScript</span>
-            <span class="tech-chip">Tailwind CSS</span>
-            <span class="tech-chip">IndexedDB</span>
-            <span class="tech-chip">WebRTC (PeerJS)</span>
-            <span class="tech-chip">PWA</span>
-          </div>
-
-          <!-- Action Links -->
-          <div class="case-actions">
-            <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer" class="btn btn-solid">
-              <span>実際のWebアプリを開く</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-            </a>
-            <a href="https://github.com/toku0716/oshi_web" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              <span>ソースコード (GitHub)</span>
-            </a>
-          </div>
+        <!-- Featured Project: Oshiss Web -->
+        <article class="project-entry">
+          <h3>推しサポ (Oshiss / Oshiss-Web)</h3>
+          <p class="project-meta">Webアプリケーション / 2026年 / React 19, TypeScript, IndexedDB, WebRTC, PWA</p>
+          <p>
+            予定管理・グッズ整理・ToDo管理を統合した推し活総合支援Webアプリです。「個人の大切な趣味データを外部サーバーに預けたくない」というプライバシー課題を解決するため、外部送信ゼロの完全端末内保存（IndexedDB）を採用しました。
+          </p>
+          <ul>
+            <li><strong>完全ローカル完結ストレージ:</strong> 個人データをサーバーに保存せず、オフラインでも全機能が動作。</li>
+            <li><strong>WebRTCによるP2P直接同期:</strong> 中継サーバーにデータを預けず、6桁コード認証による端末間（PC⇔スマホ）直接暗号化データ引き継ぎを実装。</li>
+            <li><strong>PWA対応:</strong> インストール不要で軽快に動作し、快適な利用体験を提供。</li>
+          </ul>
+          <p class="project-links">
+            <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer">Webアプリを開く ↗</a>
+            <span class="divider">/</span>
+            <a href="https://github.com/toku0716/oshi_web" target="_blank" rel="noopener noreferrer">GitHubリポジトリ ↗</a>
+          </p>
         </article>
 
-        <!-- Secondary Projects Summary -->
-        <div class="secondary-projects">
-          <div class="sec-item">
-            <div class="sec-head">
-              <span class="sec-title">macOS Native Utility Suite</span>
-              <span class="sec-tags">Swift 6 / SwiftUI / AppKit</span>
-            </div>
-            <p class="sec-desc">
-              Apple Human Interface Guidelinesに準拠したデスクトップツール群（Zip暗号化保管庫 ZipVault、タスク管理、Finder拡張等）。OSのネイティブAPIを直接叩くことで、常駐メモリを極限まで抑えた高速レスポンスを実現。
-            </p>
-          </div>
+        <!-- Other Projects -->
+        <div class="sub-projects">
+          <h4>その他の制作物・探究</h4>
+          <dl>
+            <dt>macOS Native Utility Suite (Swift 6 / SwiftUI / AppKit)</dt>
+            <dd>
+              Apple Human Interface Guidelinesに準拠したデスクトップユーティリティ群（暗号化保管庫ZipVault、タスク管理、Finder拡張等）。OS標準APIを活用し、最小限のメモリ消費と高速レスポンスを追求。
+            </dd>
 
-          <div class="sec-item">
-            <div class="sec-head">
-              <span class="sec-title">C Text Editor & GUI</span>
-              <span class="sec-tags">C99 / POSIX / VT100</span>
-            </div>
-            <p class="sec-desc">
-              外部ライブラリに一切頼らず、C言語によるメモリ管理、ポインタ操作、ギャップバッファ、VT100エスケープシーケンスを用いたターミナルrawモード制御を深く追求した低レイヤー実装プロジェクト。
-            </p>
-          </div>
+            <dt>C Text Editor & GUI (C99 / POSIX)</dt>
+            <dd>
+              外部ライブラリに依存せず、C言語ピュア実装によるメモリ管理、ギャップバッファ、VT100ターミナルrawモード制御を深く掘り下げたテキストエディタ。
+            </dd>
 
-          <div class="sec-item">
-            <div class="sec-head">
-              <span class="sec-title">DevBrowser</span>
-              <span class="sec-tags">TypeScript / Electron / DevTools</span>
-            </div>
-            <p class="sec-desc">
-              複数デバイス（スマホ・デスクトップ）のレスポンシブ画面を1画面で同時スクロール・イベント同期検証できる開発者特化型ブラウザ。Web制作時の確認工数を半減させる課題解決ツール。
-            </p>
-          </div>
+            <dt>DevBrowser (TypeScript / Electron)</dt>
+            <dd>
+              モバイルとデスクトップ画面を1画面内で同時スクロール・イベント同期検証できる開発者向け特化型ブラウザ。
+            </dd>
+
+            <dt>Akushu Repo App (React / TypeScript)</dt>
+            <dd>
+              握手会やファンミーティング直後の会話ログをチャット形式で即座に記録できるファン特化型レポートアプリ。
+            </dd>
+          </dl>
         </div>
       </section>
 
-      <!-- Academic Section (ZEN大学での学修と探究) -->
-      <section id="academic" class="content-block">
-        <div class="block-header">
-          <span class="mono-label">[ ACADEMIC FOUNDATION ]</span>
-          <h2 class="block-title">ZEN大学での学びと開発の相乗効果</h2>
-          <p class="block-desc">大学での学問的基盤と、個人のプロダクト開発がどう結びついているか</p>
-        </div>
-
-        <div class="academic-editorial">
-          <div class="academic-row">
-            <div class="academic-label-col">
-              <span class="academic-name">ZEN大学</span>
-              <span class="academic-dept-sub">知能情報社会学部</span>
-            </div>
-            <div class="academic-content-col">
-              <p>
-                ZEN大学は、株式会社ドワンゴと日本財団が提携して設立された日本発の本格的オンライン大学です。
-                私は<strong>知能情報社会学部</strong>において、「数理」「情報」「社会・ネットワーク」「デジタル産業」を横断して学修しています。
-              </p>
-              <p style="margin-top:0.6rem;">
-                単にAIツールを表面的に使うだけの技術習得ではなく、<strong>「なぜそのアルゴリズムが動くのか」「情報社会において個人のデータ主権をどう守るべきか」</strong>という数理・情報科学の基礎理論と倫理観を深めています。
-              </p>
-              <p style="margin-top:0.6rem;">
-                オンライン学習の自律的な環境を活かし、大学で学んだ分散システムや暗号化の理論を、即座に自身のプロダクト開発（WebRTCによるP2P直接通信やIndexedDBローカルストレージ）に応用・検証するという、<strong>「理論と実践の高速な往復」</strong>を実践しています。
-              </p>
-            </div>
-          </div>
-        </div>
+      <!-- Skills -->
+      <section class="section">
+        <h2>Technical Skills / 技術スタック</h2>
+        <table class="skills-table">
+          <tr>
+            <th>Frontend & Web</th>
+            <td>TypeScript, JavaScript, React 19, Next.js, Tailwind CSS, Vite, PWA, IndexedDB, WebRTC</td>
+          </tr>
+          <tr>
+            <th>macOS & Native</th>
+            <td>Swift 6, SwiftUI, AppKit, Combine, Apple Human Interface Guidelines, Xcode</td>
+          </tr>
+          <tr>
+            <th>Systems & AI</th>
+            <td>C99 (POSIX), Python, Local LLM (Ollama), Git, GitHub</td>
+          </tr>
+        </table>
       </section>
 
-      <!-- Skills Matrix Section (技術スタック) -->
-      <section id="skills" class="content-block">
-        <div class="block-header">
-          <span class="mono-label">[ TECHNICAL COMPETENCIES ]</span>
-          <h2 class="block-title">技術スタックと対応領域</h2>
-          <p class="block-desc">実際に設計・実装で活用している言語とフレームワーク</p>
-        </div>
-
-        <div class="competencies-grid">
-          <!-- 1 -->
-          <div class="competency-card">
-            <span class="comp-title">Frontend & Web Platform</span>
-            <ul class="comp-list">
-              <li><strong>TypeScript / JavaScript:</strong> 厳格な型安全、非同期処理、モジュール設計</li>
-              <li><strong>React 19 / Next.js:</strong> コンポーネント設計、状態管理、パフォーマンス最適化</li>
-              <li><strong>IndexedDB / WebRTC:</strong> 端末内データ永続化、P2P直接データ同期</li>
-              <li><strong>Tailwind CSS / CSS3:</strong> 2026年アクセシビリティ基準のレスポンシブ設計</li>
-              <li><strong>PWA / Service Worker:</strong> 完全オフライン対応、キャッシュ制御</li>
-            </ul>
-          </div>
-
-          <!-- 2 -->
-          <div class="competency-card">
-            <span class="comp-title">macOS Native & Systems</span>
-            <ul class="comp-list">
-              <li><strong>Swift 6 / SwiftUI:</strong> 宣言的UI構築、Combineによるリアクティブ制御</li>
-              <li><strong>AppKit / macOS SDK:</strong> システム常駐ツール、ファイルI/O、暗号化処理</li>
-              <li><strong>C99 / POSIX:</strong> メモリ管理、ポインタ制御、ターミナルVT100生制御</li>
-              <li><strong>Apple HIG:</strong> ネイティブの使い心地に準拠したUI/UXガイドライン実践</li>
-            </ul>
-          </div>
-
-          <!-- 3 -->
-          <div class="competency-card">
-            <span class="comp-title">AI, Tools & Architecture</span>
-            <ul class="comp-list">
-              <li><strong>Python / Local AI:</strong> Ollama等ローカルLLM連携、音声認識・合成</li>
-              <li><strong>Git / GitHub:</strong> 設計意図を明文化したコミットとリポジトリ運用</li>
-              <li><strong>Local-First Architecture:</strong> サーバーレス・プライバシー最優先設計</li>
-              <li><strong>Vite / DevTools:</strong> 高速ビルドパイプライン、プロファイリング</li>
-            </ul>
-          </div>
-        </div>
+      <!-- Links -->
+      <section class="section">
+        <h2>Links / 公式リンク</h2>
+        <ul class="links-list">
+          <li>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer">https://github.com/toku0716</a>
+            <span class="desc-faint">— 各種制作物のソースコード・コミット履歴</span>
+          </li>
+          <li>
+            <strong>X (旧Twitter):</strong>
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer">https://x.com</a>
+            <span class="desc-faint">— ZEN大学での学びや日々の開発進捗</span>
+          </li>
+          <li>
+            <strong>技術記事 (Zenn / Qiita):</strong>
+            <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer">https://zenn.dev</a>
+            <span class="desc-faint">— SwiftやTypeScriptの実装知見・技術メモ</span>
+          </li>
+          <li>
+            <strong>推しサポ (Oshiss Web):</strong>
+            <a href="https://toku0716.github.io/oshi_web/" target="_blank" rel="noopener noreferrer">https://toku0716.github.io/oshi_web/</a>
+            <span class="desc-faint">— 代表Webアプリ公開URL</span>
+          </li>
+        </ul>
       </section>
+    </main>
 
-      <!-- Links Section (活動の記録・リポジトリ) -->
-      <section id="links" class="content-block" style="border-bottom:none;">
-        <div class="block-header">
-          <span class="mono-label">[ PROOFS & REPOSITORIES ]</span>
-          <h2 class="block-title">活動の記録・公式リンク</h2>
-          <p class="block-desc">コード品質や日々の学習ログは以下のリンク先で公開しています。</p>
-        </div>
+    <!-- Footer -->
+    <footer class="page-footer">
+      <p>© 2026 Yuuki — ZEN大学 知能情報社会学部</p>
+    </footer>
 
-        <div class="links-list">
-
-          <!-- GitHub -->
-          <a href="https://github.com/toku0716" target="_blank" rel="noopener noreferrer" class="link-row">
-            <div class="link-left">
-              <div class="link-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
-              </div>
-              <div class="link-texts">
-                <div class="link-title-line">
-                  <span class="link-name">GitHub (@toku0716)</span>
-                  <span class="link-badge">SOURCE CODE</span>
-                </div>
-                <p class="link-detail">制作した各種アプリケーションのコード・コミット履歴</p>
-              </div>
-            </div>
-            <div class="link-right">
-              <button type="button" class="copy-btn copy-link-btn" data-url="https://github.com/toku0716" data-title="GitHub" title="URLをコピー">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              </button>
-              <div class="arrow-box">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- X -->
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="link-row">
-            <div class="link-left">
-              <div class="link-icon-box">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-              </div>
-              <div class="link-texts">
-                <div class="link-title-line">
-                  <span class="link-name">X (旧Twitter)</span>
-                  <span class="link-badge">LOGS & THOUGHTS</span>
-                </div>
-                <p class="link-detail">ZEN大学での学びや開発進捗、日々の気づき</p>
-              </div>
-            </div>
-            <div class="link-right">
-              <button type="button" class="copy-btn copy-link-btn" data-url="https://x.com" data-title="X" title="URLをコピー">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              </button>
-              <div class="arrow-box">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-          </a>
-
-          <!-- Zenn / Qiita -->
-          <a href="https://zenn.dev" target="_blank" rel="noopener noreferrer" class="link-row">
-            <div class="link-left">
-              <div class="link-icon-box">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-              </div>
-              <div class="link-texts">
-                <div class="link-title-line">
-                  <span class="link-name">技術記事 (Zenn / Qiita)</span>
-                  <span class="link-badge">ARTICLES</span>
-                </div>
-                <p class="link-detail">Swift・TypeScript・ローカルファーストの実践記録</p>
-              </div>
-            </div>
-            <div class="link-right">
-              <button type="button" class="copy-btn copy-link-btn" data-url="https://zenn.dev" data-title="技術記事" title="URLをコピー">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
-              </button>
-              <div class="arrow-box">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" x2="17" y1="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
-              </div>
-            </div>
-          </a>
-
-        </div>
-      </section>
-
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container-narrow footer-inner">
-      <div class="footer-meta">
-        <span class="footer-name">Yuuki</span>
-        <span class="footer-divider">•</span>
-        <span>ZEN大学 知能情報社会学部</span>
-        <span class="footer-divider">•</span>
-        <span>PORTFOLIO © 2026</span>
-      </div>
-
-      <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        <span>先頭へ</span>
-        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" x2="12" y1="19" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
-      </button>
-    </div>
-  </footer>
-
-  <!-- Toast Notification -->
-  <div id="toast" class="toast-pill">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-    <span id="toastMessage"></span>
-    <button id="toastClose" class="toast-close-x">✕</button>
   </div>
 
-  <!-- Pure JavaScript -->
-  <script src="js/script.js"></script>
 </body>
 </html>
