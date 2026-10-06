@@ -285,10 +285,10 @@
             </button>
         </div>
 
-        <div style="max-width: 800px; margin: 20px auto; padding: 12px; text-align: center;">
+        <div style="max-width: 860px; margin: 15px auto; padding: 10px; text-align: center;">
 
             <!-- 工事中看板 -->
-            <div style="margin-bottom: 15px;">
+            <div style="margin-bottom: 10px;">
                 <span class="retro-construction">
                     🚧 UNDER CONSTRUCTION（現在工事中） 🚧
                 </span>
@@ -298,190 +298,195 @@
             <div>
                 <span class="retro-title">† ようこそ！ Tokuのホームページへ †</span>
             </div>
-            <p style="color: #00ffff; font-size: 12px; margin-top: 6px;">
+            <p style="color: #00ffff; font-size: 11px; margin-top: 4px;">
                 〜 Welcome to Toku's Underground Cyber Space 〜
             </p>
 
             <hr class="retro-rainbow-hr">
 
             <!-- 電光掲示板（Marquee） -->
-            <div style="background: #000000; border: 2px inset #808080; padding: 4px; margin: 10px auto; max-width: 760px; color: #00ff00; font-family: monospace; font-size: 13px;">
+            <div style="background: #000000; border: 2px inset #ffffff; padding: 3px; margin: 8px auto; color: #00ff00; font-family: monospace; font-size: 12px;">
                 <marquee scrollamount="5" scrolldelay="50">
                     ★☆★ ようこそ！Tokuのホームページへ！ ゆっくりしていってね！ ★☆★ キリ番（7777・15000）を踏んだ方はBBSへカキコよろしく！ ★☆★ 当サイトはフレーム非対応ブラウザにも対応しています ★☆★ 画面解像度 800×600 / Internet Explorer 6.0 推奨 ★☆★
                 </marquee>
             </div>
 
-            <!-- アクセスカウンター＆キリ番 -->
-            <div style="margin: 18px 0;">
-                <div style="font-size: 12px; color: #ffff00; margin-bottom: 4px;">
-                    あなたは <span class="retro-blink">【第 <span id="retro-counter-val" class="retro-counter-box">0014289</span> 人目】</span> のお客様です！
-                </div>
-                <div style="font-size: 11px; color: #aaaaaa;">
-                    （昨日: 12 / 本日: 3）
-                </div>
-                <div class="retro-kiriban-box">
-                    ★ 次のキリ番は <strong>【15000】</strong> です！ 踏み逃げ禁止！<br>
-                    <button id="retro-kiriban-btn" class="retro-btn" style="margin-top: 5px; font-size: 11px;">キリ番報告をする</button>
-                </div>
-            </div>
-
-            <!-- ナビゲーション（テーブルメニュー） -->
-            <table class="retro-table" style="max-width: 600px; margin: 15px auto;">
+            <!-- 伝統のフレーム風2カラムテーブル -->
+            <table class="retro-frame-table">
                 <tr>
-                    <th colspan="4" style="text-align: center; color: #ffff00;">〜 MENU 〜</th>
-                </tr>
-                <tr style="text-align: center;">
-                    <td><a href="#retro-about">■ 自己紹介</a></td>
-                    <td><a href="#retro-works">■ 作品集</a></td>
-                    <td><a href="#retro-links">■ リンク集</a></td>
-                    <td><a href="#retro-bbs" id="retro-bbs-btn">■ 掲示板 (BBS)</a></td>
+                    <!-- 左サイドバー（メニュー・カウンター・バナー） -->
+                    <td class="retro-sidebar">
+                        <table class="retro-table" style="margin: 0 auto;">
+                            <tr>
+                                <th style="text-align: center; color: #ffff00;">〜 MENU 〜</th>
+                            </tr>
+                            <tr><td><a href="#retro-about">■ 自己紹介</a></td></tr>
+                            <tr><td><a href="#retro-works">■ 作品集</a></td></tr>
+                            <tr><td><a href="#retro-links">■ リンク集</a></td></tr>
+                            <tr><td><a href="#retro-bbs" id="retro-bbs-btn">■ 掲示板 (BBS)</a></td></tr>
+                        </table>
+
+                        <hr class="retro-etched-hr">
+
+                        <!-- アクセスカウンター -->
+                        <div style="font-size: 11px; color: #ffff00; margin: 8px 0 2px;">
+                            あなたは <br><span class="retro-blink">【第 <span id="retro-counter-val" class="retro-counter-box">0014289</span> 人目】</span><br> のお客様です！
+                        </div>
+                        <div style="font-size: 10px; color: #aaaaaa; margin-bottom: 8px;">
+                            （昨日: 12 / 本日: 3）
+                        </div>
+
+                        <!-- キリ番 -->
+                        <div class="retro-kiriban-box">
+                            ★ 次のキリ番: <strong>15000</strong><br>
+                            踏み逃げ禁止！<br>
+                            <button id="retro-kiriban-btn" class="retro-btn" style="margin-top: 4px; font-size: 10px;">キリ番報告</button>
+                        </div>
+
+                        <hr class="retro-etched-hr">
+
+                        <!-- Web拍手 -->
+                        <div style="margin: 10px 0;">
+                            <button id="retro-clap-btn" class="retro-btn" style="font-size: 11px; background: #ffcc00; color: #000;">
+                                👏 Web拍手
+                            </button>
+                            <div style="font-size: 10px; color: #aaaaaa; margin-top: 4px;">
+                                拍手: <span id="retro-clap-count" style="color: #ffff00; font-weight: bold;">7</span> 回
+                            </div>
+                        </div>
+
+                        <hr class="retro-etched-hr">
+
+                        <!-- 88x31 バナー -->
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 6px; margin: 10px 0;">
+                            <span class="retro-banner" style="background:#000066; color:#00ffff;">NETSCAPE<br>NOW!</span>
+                            <span class="retro-banner" style="background:#003300; color:#00ff00;">Internet<br>Explorer</span>
+                            <span class="retro-banner" style="background:#440000; color:#ffff00;">Notepad<br>で作成中</span>
+                            <span class="retro-banner" style="background:#330033; color:#ff99ff;">リンク<br>フリー</span>
+                        </div>
+                    </td>
+
+                    <!-- 右メインコンテンツ -->
+                    <td class="retro-content-cell">
+
+                        <!-- 01: 自己紹介（About） -->
+                        <div id="retro-about">
+                            <h3 style="color: #ff00ff; margin: 4px 0 8px; font-size: 14px; text-align: left; border-bottom: 2px solid #ff00ff; padding-bottom: 2px;">
+                                † Profile（自己紹介） †
+                            </h3>
+                            <table class="retro-table">
+                                <tr>
+                                    <th style="width: 30%;">項目</th>
+                                    <th>内容</th>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">ハンドルネーム</td>
+                                    <td>Toku</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">生息地</td>
+                                    <td>電脳空間（Cyber Space）</td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">好きな言葉 (Favorite)</td>
+                                    <td><span style="color: #00ff00; font-style: italic;">“Stay Hungry, Stay Foolish”</span></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">開発言語 (Skill)</td>
+                                    <td>
+                                        ・<strong>Python</strong>（AIシステムの開発）<br>
+                                        ・<strong>Dart / Flutter</strong>（モバイルアプリの開発）<br>
+                                        ・<strong>TypeScript / JavaScript</strong>（Webアプリ・サイトの開発）
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">管理人からひとこと</td>
+                                    <td>AIを活用して個人開発を行っています。日夜コードを書いています！相互リンクやカキコはお気軽にどうぞ！</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <hr class="retro-rainbow-hr">
+
+                        <!-- 02: 作品集（Works） -->
+                        <div id="retro-works" style="margin-top: 14px;">
+                            <h3 style="color: #00ffff; margin: 4px 0 8px; font-size: 14px; text-align: left; border-bottom: 2px solid #00ffff; padding-bottom: 2px;">
+                                † My Works（作品集） †
+                            </h3>
+                            <table class="retro-table">
+                                <tr>
+                                    <th style="width: 40%;">作品名 / 使用技術</th>
+                                    <th>説明</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong style="color: #ffff00;">01. 推しサポ（アプリ版）</strong><br>
+                                        <span style="font-size: 10px; color: #aaaaaa;">[Flutter / Dart / Firebase]</span>
+                                    </td>
+                                    <td>推し活をサポートするモバイルアプリ。Web版の反応を見て展開予定。</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong style="color: #ffff00;">02. 推しサポ Web版（PWA）</strong><br>
+                                        <span style="font-size: 10px; color: #aaaaaa;">[React / TypeScript / PWA / IndexedDB]</span>
+                                    </td>
+                                    <td>推しサポのWeb / PWA版。近日公開予定。</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong style="color: #ffff00;">03. AI VTuber システム</strong><br>
+                                        <span style="font-size: 10px; color: #aaaaaa;">[Python / PyTorch / LLM / VOICEVOX]</span>
+                                    </td>
+                                    <td>YouTube配信やOBSと連携する自律対話型AI配信システム（テストたん）。</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <strong style="color: #ffff00;">04. ポートフォリオサイト</strong><br>
+                                        <span style="font-size: 10px; color: #aaaaaa;">[HTML / CSS / JavaScript / Three.js]</span>
+                                    </td>
+                                    <td>プロフィールや制作物をまとめたポートフォリオサイト。</td>
+                                </tr>
+                            </table>
+                        </div>
+
+                        <hr class="retro-rainbow-hr">
+
+                        <!-- 03: リンク集（Links） -->
+                        <div id="retro-links" style="margin-top: 14px;">
+                            <h3 style="color: #ffff00; margin: 4px 0 8px; font-size: 14px; text-align: left; border-bottom: 2px solid #ffff00; padding-bottom: 2px;">
+                                † Links（同盟・リンク集） †
+                            </h3>
+                            <table class="retro-table">
+                                <tr>
+                                    <th style="width: 35%;">サイト名</th>
+                                    <th>URL</th>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">■ GitHub</td>
+                                    <td><a href="https://github.com/toku0716" target="_blank">github.com/toku0716 ↗</a></td>
+                                </tr>
+                                <tr>
+                                    <td style="color: #ffff00;">■ X (Twitter)</td>
+                                    <td><a href="https://x.com/tokku_gt" target="_blank">x.com/tokku_gt ↗</a></td>
+                                </tr>
+                            </table>
+
+                            <div style="margin: 10px 0; padding: 8px; background: #000030; border: 1px dashed #808080; font-size: 11px; text-align: left;">
+                                ★ 当サイトは<strong>【リンクフリー】</strong>です！報告不要ですが、BBSに一言いただけると管理人が泣いて喜びます。<br>
+                                ※ バナーは直リンク厳禁！必ず右クリックでお持ち帰り（ダウンロード）の上ご使用ください。
+                            </div>
+                        </div>
+
+                    </td>
                 </tr>
             </table>
 
-            <hr class="retro-rainbow-hr">
-
-            <!-- 01: 自己紹介（About） -->
-            <div id="retro-about" style="margin: 25px 0;">
-                <h2 style="color: #ff00ff; font-size: 18px; margin-bottom: 10px;">
-                    † Profile（自己紹介） †
-                </h2>
-                <table class="retro-table">
-                    <tr>
-                        <th style="width: 25%;">項目</th>
-                        <th>内容</th>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00; font-weight: bold;">ハンドルネーム</td>
-                        <td>Toku</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00; font-weight: bold;">生息地</td>
-                        <td>電脳空間（Cyber Space）</td>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00; font-weight: bold;">好きな言葉 (Favorite)</td>
-                        <td><span style="color: #00ff00; font-style: italic;">“Stay Hungry, Stay Foolish”</span></td>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00; font-weight: bold;">開発言語 (Skill)</td>
-                        <td>
-                            ・<strong>Python</strong>（AIシステムの開発）<br>
-                            ・<strong>Dart / Flutter</strong>（モバイルアプリの開発）<br>
-                            ・<strong>TypeScript / JavaScript</strong>（Webアプリ・サイトの開発）
-                        </td>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00; font-weight: bold;">管理人からひとこと</td>
-                        <td>AIを活用して個人開発を行っています。日夜コードを書いています！相互リンクやカキコはお気軽にどうぞ！</td>
-                    </tr>
-                </table>
-            </div>
-
-            <hr class="retro-rainbow-hr">
-
-            <!-- 02: 作品集（Works） -->
-            <div id="retro-works" style="margin: 25px 0;">
-                <h2 style="color: #00ffff; font-size: 18px; margin-bottom: 10px;">
-                    † My Works（作品集） †
-                </h2>
-                <table class="retro-table">
-                    <tr>
-                        <th style="width: 35%;">作品名 / 使用技術</th>
-                        <th>説明</th>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong style="color: #ffff00; font-size: 14px;">01. 推しサポ（アプリ版）</strong><br>
-                            <span style="font-size: 11px; color: #aaaaaa;">[Flutter / Dart / Firebase]</span>
-                        </td>
-                        <td>推し活をサポートするモバイルアプリ。Web版の反応を見て展開予定。</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong style="color: #ffff00; font-size: 14px;">02. 推しサポ Web版（PWA）</strong><br>
-                            <span style="font-size: 11px; color: #aaaaaa;">[React / TypeScript / PWA / IndexedDB]</span>
-                        </td>
-                        <td>推しサポのWeb / PWA版。近日公開予定。</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong style="color: #ffff00; font-size: 14px;">03. AI VTuber システム</strong><br>
-                            <span style="font-size: 11px; color: #aaaaaa;">[Python / PyTorch / LLM / VOICEVOX]</span>
-                        </td>
-                        <td>YouTube配信やOBSと連携する自律対話型AI配信システム（テストたん）。</td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong style="color: #ffff00; font-size: 14px;">04. ポートフォリオサイト</strong><br>
-                            <span style="font-size: 11px; color: #aaaaaa;">[HTML / CSS / JavaScript / Three.js]</span>
-                        </td>
-                        <td>プロフィールや制作物をまとめたポートフォリオサイト。</td>
-                    </tr>
-                </table>
-            </div>
-
-            <hr class="retro-rainbow-hr">
-
-            <!-- 03: リンク集（Links） -->
-            <div id="retro-links" style="margin: 25px 0;">
-                <h2 style="color: #ffff00; font-size: 18px; margin-bottom: 10px;">
-                    † Links（同盟・リンク集） †
-                </h2>
-                <table class="retro-table">
-                    <tr>
-                        <th style="width: 35%;">サイト名</th>
-                        <th>URL</th>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00;">■ GitHub</td>
-                        <td><a href="https://github.com/toku0716" target="_blank">github.com/toku0716 ↗</a></td>
-                    </tr>
-                    <tr>
-                        <td style="color: #ffff00;">■ X (Twitter)</td>
-                        <td><a href="https://x.com/tokku_gt" target="_blank">x.com/tokku_gt ↗</a></td>
-                    </tr>
-                </table>
-
-                <div style="margin: 15px auto; padding: 10px; background: #000033; border: 1px dashed #808080; max-width: 600px; font-size: 12px; color: #ffffff;">
-                    ★ 当サイトは<strong>【リンクフリー】</strong>です！報告不要ですが、BBSに一言いただけると管理人が泣いて喜びます。<br>
-                    ※ バナーは直リンク厳禁！必ず右クリックでお持ち帰り（ダウンロード）の上ご使用ください。
-                </div>
-
-                <!-- 88x31 レトロバナー集 -->
-                <div style="display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 15px;">
-                    <span class="retro-banner" style="background:#000066; color:#00ffff;">
-                        NETSCAPE<br>NOW!
-                    </span>
-                    <span class="retro-banner" style="background:#003300; color:#00ff00;">
-                        Internet<br>Explorer
-                    </span>
-                    <span class="retro-banner" style="background:#440000; color:#ffff00;">
-                        Notepad<br>で作成中
-                    </span>
-                    <span class="retro-banner" style="background:#330033; color:#ff99ff;">
-                        リンク<br>フリー
-                    </span>
-                </div>
-            </div>
-
-            <hr class="retro-rainbow-hr">
-
-            <!-- Web拍手ボタン -->
-            <div style="margin: 25px 0;">
-                <button id="retro-clap-btn" class="retro-btn" style="font-size: 14px; padding: 6px 18px; background: #ffcc00; color: #000000;">
-                    👏 Web拍手を送る（パチパチ）
-                </button>
-                <div style="font-size: 12px; color: #aaaaaa; margin-top: 6px;">
-                    現在の拍手: <span id="retro-clap-count" style="color: #ffff00; font-weight: bold;">7</span> 回
-                </div>
-            </div>
-
             <!-- レトロフッター -->
-            <div style="margin-top: 30px; font-size: 11px; color: #888888; border-top: 1px solid #444444; padding-top: 12px;">
+            <div style="margin-top: 20px; font-size: 10px; color: #888888; border-top: 1px solid #444444; padding-top: 10px;">
                 <p>Best viewed with Internet Explorer 5.5 or later / 800×600 pixel / High Color (16bit)</p>
                 <p>© 2002-2026 Toku Cyber Space. All Rights Reserved.</p>
-                <div style="margin-top: 12px;">
-                    <button class="js-to-modern-btn retro-btn" style="background: #ffffff; color: #000000; font-size: 12px;">
+                <div style="margin-top: 10px;">
+                    <button class="js-to-modern-btn retro-btn" style="background: #ffffff; color: #000000; font-size: 11px;">
                         🚀 現代モードに戻る（Three.js WebGL版）
                     </button>
                 </div>

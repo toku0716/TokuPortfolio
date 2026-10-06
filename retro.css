@@ -1,136 +1,214 @@
 /* ============================================================
-   Retro 90s Web Style - ネット黎明期・平成レトロ個人サイト風スタイル
+   Retro Web 1.0 Stylesheet - ネット黎明期・平成個人サイト完全再現CSS
+   （Windows 98 / Internet Explorer 5.5〜6.0 / ジオシティーズ黄金期）
    ============================================================ */
 
-/* 黎明期モード有効時のbody設定 */
+/* ------------------------------------------------------------
+   全体基本設定（MS Pゴシック 12px / 星空タイル背景 / リンク青下線）
+   ------------------------------------------------------------ */
 body.retro-active {
-  background-color: #000022 !important;
-  background-image: 
-    radial-gradient(1px 1px at 20px 30px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 40px 70px, #ffff00, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 50px 160px, #00ffff, rgba(0,0,0,0)),
-    radial-gradient(1.5px 1.5px at 90px 40px, #ffffff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 130px 80px, #ff00ff, rgba(0,0,0,0)),
-    radial-gradient(1px 1px at 160px 120px, #ffffff, rgba(0,0,0,0)) !important;
+  background-color: #000014 !important;
+  /* 90年代の星空GIF壁紙を完全再現したSVGリピートタイル */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%23000014'/%3E%3Crect x='12' y='18' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='42' y='75' width='1' height='1' fill='%23ffff00'/%3E%3Crect x='82' y='14' width='2' height='2' fill='%23ffffff'/%3E%3Crect x='102' y='60' width='1' height='1' fill='%2300ffff'/%3E%3Crect x='28' y='98' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='64' y='38' width='1' height='1' fill='%23ff00ff'/%3E%3Crect x='88' y='105' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='68' width='1' height='1' fill='%23ffff88'/%3E%3C/svg%3E") !important;
   background-repeat: repeat !important;
-  background-size: 200px 200px !important;
   color: #ffffff !important;
-  font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic ProN", "Yu Gothic", monospace !important;
-  font-size: 13px !important;
-  line-height: 1.6 !important;
-  cursor: auto !important;
-  overflow-x: auto !important;
+  font-family: "MS PGothic", "ＭＳ Ｐゴシック", "Hiragino Kaku Gothic ProN", "Osaka", monospace !important;
+  font-size: 12px !important;
+  line-height: 1.5 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+
+  /* 当時誰もが設定していたIE独自スクロールバー着色 */
+  scrollbar-face-color: #000080;
+  scrollbar-track-color: #000020;
+  scrollbar-arrow-color: #ffff00;
+  scrollbar-highlight-color: #0000ff;
+  scrollbar-shadow-color: #000040;
+  scrollbar-3dlight-color: #ffffff;
+  scrollbar-darkshadow-color: #000000;
 }
 
-/* 黎明期モード中はThree.jsキャンバスを非表示 */
+/* 現代のブラウザでもIE風立体青色スクロールバーを再現 */
+body.retro-active::-webkit-scrollbar {
+  width: 16px;
+  background: #000020;
+}
+body.retro-active::-webkit-scrollbar-thumb {
+  background: #000080;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+}
+body.retro-active::-webkit-scrollbar-button {
+  background: #000080;
+  border-top: 2px solid #ffffff;
+  border-left: 2px solid #ffffff;
+  border-right: 2px solid #000000;
+  border-bottom: 2px solid #000000;
+  height: 16px;
+}
+
+/* 黎明期モード中はThree.jsキャンバスを強制非表示 */
 body.retro-active #webgl-canvas {
   display: none !important;
 }
 
-/* 黎明期モードのリンクスタイル */
+/* ------------------------------------------------------------
+   リンクスタイル（純青・訪問済紫・ホバー時赤）
+   ------------------------------------------------------------ */
 #retro-view a {
-  color: #00ffff;
-  text-decoration: underline;
+  color: #00ffff !important;
+  text-decoration: underline !important;
+  font-weight: normal !important;
 }
 #retro-view a:visited {
-  color: #ff99ff;
+  color: #ff99ff !important;
 }
 #retro-view a:hover {
-  color: #ffff00;
-  background-color: #000088;
+  color: #ffff00 !important;
+  background-color: #000080 !important;
+  text-decoration: none !important;
+}
+#retro-view a:active {
+  color: #ff0000 !important;
 }
 
-/* 点滅アニメーション（blinkタグの再現） */
-@keyframes retro-blink {
+/* ------------------------------------------------------------
+   文字装飾・見出し
+   ------------------------------------------------------------ */
+/* ワードアート風見出し */
+.retro-title {
+  font-family: "Impact", "Arial Black", "MS PGothic", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffff00;
+  text-shadow: 2px 2px 0 #ff0000, 4px 4px 0 #0000cc;
+  letter-spacing: 2px;
+}
+
+/* 点滅（blinkの再現） */
+@keyframes retro-blink-anim {
   0%, 49% { opacity: 1; }
   50%, 100% { opacity: 0; }
 }
 .retro-blink {
-  animation: retro-blink 1s infinite;
-  font-weight: bold;
+  animation: retro-blink-anim 1s infinite;
 }
 
-/* ワードアート風・立体虹色タイトル */
-.retro-title {
-  font-family: "Impact", "Arial Black", "MS PGothic", sans-serif;
-  font-size: clamp(24px, 5vw, 42px);
-  font-weight: 900;
-  color: #ffff00;
-  text-shadow: 
-    2px 2px 0 #ff0000,
-    4px 4px 0 #0000cc,
-    6px 6px 0 #000000;
-  letter-spacing: 2px;
-  display: inline-block;
-  transform: perspective(400px) rotateX(10deg);
-}
-
-/* 虹色グラデーション区切り線 */
+/* 虹色グラデーションライン */
 .retro-rainbow-hr {
   height: 4px;
   border: none;
-  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8f00ff);
-  margin: 14px auto;
-  max-width: 780px;
+  background: linear-gradient(90deg, #ff0000, #ff7f00, #ffff00, #00ff00, #00ffff, #0000ff, #8b00ff);
+  margin: 10px auto;
 }
 
-/* 昔の立体枠テーブル */
-.retro-table {
-  border-collapse: separate;
-  border-spacing: 2px;
-  border: 3px outset #c0c0c0;
-  background-color: #000044;
+/* 伝統の立体彫り込み線 (hr noshade) */
+.retro-etched-hr {
+  border-top: 1px solid #808080;
+  border-bottom: 1px solid #ffffff;
+  border-left: none;
+  border-right: none;
+  height: 0;
+  margin: 8px 0;
+}
+
+/* ------------------------------------------------------------
+   テーブルスタイル（ベベル立体枠線・濃紺ヘッダー）
+   ------------------------------------------------------------ */
+.retro-frame-table {
   width: 100%;
-  max-width: 760px;
-  margin: 12px auto;
-  box-shadow: 4px 4px 0 rgba(0, 0, 0, 0.7);
+  max-width: 820px;
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 4px;
+}
+
+.retro-sidebar {
+  width: 200px;
+  vertical-align: top;
+  background-color: #000030;
+  border: 2px outset #ffffff;
+  padding: 8px;
+  text-align: center;
+}
+
+.retro-content-cell {
+  vertical-align: top;
+  background-color: #000020;
+  border: 2px outset #ffffff;
+  padding: 12px;
+}
+
+.retro-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 1px;
+  border: 2px outset #ffffff;
+  background-color: #808080;
+  margin: 8px 0;
 }
 .retro-table th {
   background-color: #000080;
   color: #ffff00;
-  padding: 6px 10px;
-  border: 2px inset #c0c0c0;
+  padding: 4px 8px;
+  border: 1px inset #ffffff;
+  font-size: 12px;
   text-align: left;
-  font-size: 13px;
-  font-weight: bold;
 }
 .retro-table td {
-  background-color: #000022;
+  background-color: #000028;
   color: #ffffff;
-  padding: 8px 12px;
-  border: 2px inset #c0c0c0;
-  font-size: 13px;
+  padding: 6px 8px;
+  border: 1px inset #ffffff;
+  font-size: 12px;
 }
 
-/* アクセスカウンター */
+/* ------------------------------------------------------------
+   アクセスカウンター（黒背景に赤LED風数字）
+   ------------------------------------------------------------ */
 .retro-counter-box {
   display: inline-block;
   background: #000000;
-  border: 3px inset #808080;
-  padding: 4px 10px;
+  border: 2px inset #ffffff;
+  padding: 2px 6px;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   color: #ff3333;
-  letter-spacing: 3px;
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.9);
+  letter-spacing: 2px;
 }
 
-/* 工事中サイン */
-.retro-construction {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: #ffff00;
-  color: #000000;
-  border: 2px solid #000000;
-  padding: 4px 12px;
-  font-weight: bold;
-  font-size: 12px;
-  box-shadow: 2px 2px 0 #fff;
+/* ------------------------------------------------------------
+   Windows 95/98風グレーボタン
+   ------------------------------------------------------------ */
+.retro-btn {
+  background: #c0c0c0 !important;
+  color: #000000 !important;
+  border-top: 2px solid #ffffff !important;
+  border-left: 2px solid #ffffff !important;
+  border-right: 2px solid #404040 !important;
+  border-bottom: 2px solid #404040 !important;
+  padding: 3px 10px !important;
+  font-family: "MS PGothic", monospace !important;
+  font-size: 12px !important;
+  cursor: pointer !important;
+  text-decoration: none !important;
+  display: inline-block !important;
+  user-select: none !important;
+}
+.retro-btn:active {
+  border-top: 2px solid #404040 !important;
+  border-left: 2px solid #404040 !important;
+  border-right: 2px solid #ffffff !important;
+  border-bottom: 2px solid #ffffff !important;
+  padding: 4px 9px 2px 11px !important;
 }
 
-/* 88x31 レトロバナー */
+/* ------------------------------------------------------------
+   88x31 レトロバナー
+   ------------------------------------------------------------ */
 .retro-banner {
   display: inline-flex;
   flex-direction: column;
@@ -147,62 +225,46 @@ body.retro-active #webgl-canvas {
   text-align: center;
   cursor: pointer;
   user-select: none;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  box-sizing: border-box;
 }
 .retro-banner:active {
   border-style: inset;
 }
 
-/* 昔のボタン（Windows 95/98風） */
-.retro-btn {
-  background: #c0c0c0;
+/* ------------------------------------------------------------
+   工事中＆キリ番ボックス
+   ------------------------------------------------------------ */
+.retro-construction {
+  display: inline-block;
+  background: #ffff00;
   color: #000000;
-  border-top: 2px solid #ffffff;
-  border-left: 2px solid #ffffff;
-  border-right: 2px solid #404040;
-  border-bottom: 2px solid #404040;
-  padding: 4px 14px;
-  font-family: "MS PGothic", monospace;
-  font-size: 13px;
+  border: 2px solid #000000;
+  padding: 2px 8px;
   font-weight: bold;
-  cursor: pointer;
-  box-shadow: 1px 1px 0 #000;
-}
-.retro-btn:active {
-  border-top: 2px solid #404040;
-  border-left: 2px solid #404040;
-  border-right: 2px solid #ffffff;
-  border-bottom: 2px solid #ffffff;
-  padding: 5px 13px 3px 15px;
+  font-size: 11px;
 }
 
-/* キリ番ボックス */
 .retro-kiriban-box {
   background: #003300;
-  border: 2px dashed #00ff00;
+  border: 1px dashed #00ff00;
   color: #00ff00;
-  padding: 8px;
-  max-width: 600px;
-  margin: 10px auto;
-  font-size: 12px;
+  padding: 6px;
+  margin: 6px 0;
+  font-size: 11px;
 }
 
-/* 現代復帰用フローティングバー */
+/* ------------------------------------------------------------
+   現代モード復帰バー（画面最上部固定）
+   ------------------------------------------------------------ */
 .retro-return-bar {
-  background: linear-gradient(90deg, #ff0000, #cc0000);
+  background: #cc0000;
   color: #ffffff;
-  padding: 8px 12px;
+  padding: 6px 10px;
   text-align: center;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: bold;
   border-bottom: 2px outset #ffffff;
   position: sticky;
   top: 0;
   z-index: 99999;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
