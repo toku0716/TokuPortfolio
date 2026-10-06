@@ -1,6 +1,6 @@
 /**
- * Retro Mode Toggle & Web 1.0 Nostalgia Scripts
- * 90年代・ネット黎明期モードと現代モードの切替およびレトロギミック
+ * Retro Mode Toggle & Web 1.0 Controller
+ * ネット黎明期（HTML 3.2 / 静止単色背景）モードと現代モードの切替
  */
 (() => {
   const STORAGE_KEY = 'toku_portfolio_mode';
@@ -101,41 +101,5 @@
         alert('【キリ番GETの方へ】\n踏み逃げ禁止です！ぜひ報告してくださいね★');
       });
     }
-  });
-
-  // ============================================================
-  // 90s マウストレイル（星屑エフェクト：レトロモード時のみ動作）
-  // ============================================================
-  const sparkles = ['★', '☆', '✦', '✧', '・'];
-  const colors = ['#ffff00', '#00ffff', '#ff00ff', '#ffffff', '#00ff00'];
-
-  document.addEventListener('mousemove', (e) => {
-    if (!document.body.classList.contains('retro-active')) return;
-    if (Math.random() > 0.4) return; // 発生頻度の調整
-
-    const span = document.createElement('span');
-    span.textContent = sparkles[Math.floor(Math.random() * sparkles.length)];
-    span.style.position = 'fixed';
-    span.style.left = (e.clientX + (Math.random() * 16 - 8)) + 'px';
-    span.style.top = (e.clientY + (Math.random() * 16 - 8)) + 'px';
-    span.style.color = colors[Math.floor(Math.random() * colors.length)];
-    span.style.fontSize = (Math.random() * 10 + 10) + 'px';
-    span.style.pointerEvents = 'none';
-    span.style.zIndex = '999999';
-    span.style.fontFamily = 'monospace';
-    span.style.transition = 'all 0.8s ease-out';
-    span.style.opacity = '1';
-    span.style.transform = 'translateY(0) scale(1)';
-
-    document.body.appendChild(span);
-
-    requestAnimationFrame(() => {
-      span.style.transform = `translateY(${Math.random() * 25 + 15}px) scale(0.2)`;
-      span.style.opacity = '0';
-    });
-
-    setTimeout(() => {
-      span.remove();
-    }, 850);
   });
 })();
