@@ -76,93 +76,38 @@
                     </p>
                 </div>
 
-                <!-- 2カラム構成: 経歴 (Timeline) & 技術スタック (Tech Stack) -->
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 pt-6 border-t border-white/10">
-                    <!-- 経歴 (Timeline) -->
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Timeline / 経歴</span>
-                        </div>
-
-                        <ol class="relative border-l border-white/15 ml-2.5 space-y-6 text-sm">
-                            <li class="pl-6 relative">
-                                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/40 ring-4 ring-black"></span>
-                                <span class="text-xs font-mono text-gray-400 block mb-0.5">〜 2022.03</span>
-                                <div class="font-semibold text-white">専門学校 卒業</div>
-                                <p class="text-xs text-gray-400 mt-1 leading-relaxed">
-                                    就職活動で難航し挫折を経験。先端技術への興味から学び直しを決意。
-                                </p>
-                            </li>
-                            <li class="pl-6 relative">
-                                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/80 ring-4 ring-black"></span>
-                                <span class="text-xs font-mono text-gray-400 block mb-0.5">入学 〜 現在</span>
-                                <div class="font-semibold text-white">ZEN大学 在学</div>
-                                <p class="text-xs text-gray-400 mt-1 leading-relaxed">
-                                    AIや最新のテクノロジーを体系的に学習中。
-                                </p>
-                            </li>
-                            <li class="pl-6 relative">
-                                <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white ring-4 ring-black"></span>
-                                <span class="text-xs font-mono text-white block mb-0.5">Present</span>
-                                <div class="font-semibold text-white">AI駆動開発（AI-Driven Dev）</div>
-                                <p class="text-xs text-gray-400 mt-1 leading-relaxed">
-                                    AIエージェントと協調し、アプリやWebサービスの個人開発を推進。
-                                </p>
-                            </li>
-                        </ol>
+                <!-- 経歴 (Timeline) -->
+                <div class="pt-6 border-t border-white/10 space-y-6">
+                    <div class="flex items-center gap-2">
+                        <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Career & Timeline / 経歴</span>
                     </div>
 
-                    <!-- 技術スタック (Tech Stack) -->
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-2">
-                            <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Tech Stack / スタック</span>
-                        </div>
-
-                        <div class="space-y-4">
-                            <!-- AI & Backend -->
-                            <div class="p-3.5 rounded-lg bg-white/[0.03] border border-white/10 space-y-2">
-                                <div class="text-xs font-mono font-semibold text-gray-300">AI / LLM / Backend</div>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Python</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">PyTorch</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">LLM (Gemma / Qwen)</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">VOICEVOX</span>
-                                </div>
-                            </div>
-
-                            <!-- Mobile -->
-                            <div class="p-3.5 rounded-lg bg-white/[0.03] border border-white/10 space-y-2">
-                                <div class="text-xs font-mono font-semibold text-gray-300">Mobile</div>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Dart</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Flutter</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Firebase</span>
-                                </div>
-                            </div>
-
-                            <!-- Frontend -->
-                            <div class="p-3.5 rounded-lg bg-white/[0.03] border border-white/10 space-y-2">
-                                <div class="text-xs font-mono font-semibold text-gray-300">Frontend</div>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">TypeScript</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">JavaScript</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">React</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Tailwind CSS</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Three.js</span>
-                                </div>
-                            </div>
-
-                            <!-- Dev Workflow -->
-                            <div class="p-3.5 rounded-lg bg-white/[0.03] border border-white/10 space-y-2">
-                                <div class="text-xs font-mono font-semibold text-gray-300">Dev Workflow</div>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">AI-Driven Dev</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Antigravity CLI (agy)</span>
-                                    <span class="px-2 py-0.5 text-xs font-mono bg-white/10 text-gray-200 rounded">Git / GitHub</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <ol class="relative border-l border-white/15 ml-2.5 space-y-8 text-sm">
+                        <li class="pl-6 relative">
+                            <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/40 ring-4 ring-black"></span>
+                            <span class="text-xs font-mono text-gray-400 block mb-1">〜 2022.03</span>
+                            <div class="font-semibold text-base text-white">専門学校 卒業</div>
+                            <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
+                                卒業後の就職活動で思うような結果が出ず挫折を経験。先端技術への探究心から再挑戦と学び直しを決意。
+                            </p>
+                        </li>
+                        <li class="pl-6 relative">
+                            <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/80 ring-4 ring-black"></span>
+                            <span class="text-xs font-mono text-gray-400 block mb-1">入学 〜 現在</span>
+                            <div class="font-semibold text-base text-white">ZEN大学 在学</div>
+                            <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
+                                AIや先端のIT技術を本格的に学ぶため進学。最新テクノロジーを体系的に学習中。
+                            </p>
+                        </li>
+                        <li class="pl-6 relative">
+                            <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white ring-4 ring-black"></span>
+                            <span class="text-xs font-mono text-emerald-400 block mb-1">Present</span>
+                            <div class="font-semibold text-base text-white">AI駆動開発（AI-Driven Dev）</div>
+                            <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
+                                自律型AIエージェントと協調し、アプリやWebサービスの個人開発に日々熱中。
+                            </p>
+                        </li>
+                    </ol>
                 </div>
 
                 <div class="pt-6 border-t border-white/10 space-y-1.5">
