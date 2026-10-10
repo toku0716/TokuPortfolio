@@ -2,21 +2,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Auto Commit & Push (自動監視・プッシュ)",
-            "type": "shell",
-            "command": "node auto-push.js",
-            "isBackground": true,
-            "problemMatcher": [],
-            "presentation": {
-                "reveal": "always",
-                "panel": "new",
-                "clear": false
-            },
-            "runOptions": {
-                "runOn": "folderOpen"
-            }
-        },
-        {
             "label": "今すぐコミット＆プッシュ (手動実行)",
             "type": "shell",
             "command": "git add index.html style.css space-3d.js README.md 2>/dev/null || git add . && git commit -m \"update: manual push $(date '+%Y-%m-%d %H:%M:%S')\" && git push",
