@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toku - Portfolio</title>
+    <title>Toku - Portfolio | AI & Digital Entertainment</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,12 +29,16 @@
     <!-- Hero セクション（全画面ファーストビュー） -->
     <header id="hero" class="min-h-screen flex flex-col justify-center items-start px-6 md:px-16 lg:px-24 relative z-10 max-w-6xl mx-auto">
         <div class="space-y-6 pt-20">
-            <div class="inline-block tag-badge">
-                PORTFOLIO
+            <div class="inline-flex items-center gap-2 tag-badge">
+                <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                <span>AI & DIGITAL ENTERTAINMENT</span>
             </div>
             <h1 class="text-6xl sm:text-8xl md:text-9xl font-extrabold tracking-tight text-white leading-none">
                 Toku
             </h1>
+            <p class="text-lg sm:text-2xl text-gray-300 font-light max-w-2xl leading-relaxed pt-2">
+                人工知能とエンタメ・デジタル産業の交差点で、AI駆動開発によるモノづくりを探究するポートフォリオ。
+            </p>
         </div>
 
         <!-- スクロール誘導インジケータ -->
@@ -68,43 +72,68 @@
                             Toku
                         </h3>
                         <span class="text-xs font-mono text-gray-300 px-3 py-1 bg-white/5 rounded-full border border-white/10">
-                            ZEN University / AI-Driven Dev
+                            ZEN University / AI × Digital Entertainment
                         </span>
                     </div>
                     <p class="text-gray-200 text-base sm:text-lg leading-relaxed font-normal">
-                        2022年3月の専門学校卒業後に就職で挫折を経験するも、AIを本格的に学ぶためZEN大学へ進学。現在はAIをパートナーにした「AI駆動開発」を武器に、アプリやサービスの個人開発に挑戦しています。
+                        2020年に専門学校へ入学し情報処理を学ぶ中で、当時発展初期にあった人工知能への強い関心を抱きました。卒業後も冷めることのなかったAIへの熱意と、自身が惹かれてきたアニメなどのエンターテインメント文化への興味から、「1つの学科で多様な分野を横断して学べる」ZEN大学へ進学。文化が生まれ広まる仕組みを紐解く「デジタル産業」と「人工知能」の学びを通じて自身の将来像を描き、現在はAIをパートナーにした「AI駆動開発」でアプリやWebサービスの個人開発に挑んでいます。
                     </p>
+                </div>
+
+                <!-- 探究の3つの柱 (Academic & Creative Pillars) -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                    <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                        <div class="text-xs font-mono text-emerald-400 uppercase tracking-wide">01 / Artificial Intelligence</div>
+                        <div class="font-semibold text-sm text-white">人工知能の本格学修</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            専門学校時代から燃え続けるAIへの探究心。LLMや自律型エージェントなどの先端技術を体系的に学び実践。
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                        <div class="text-xs font-mono text-purple-400 uppercase tracking-wide">02 / Digital Entertainment</div>
+                        <div class="font-semibold text-sm text-white">デジタル産業 & エンタメ</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            アニメをはじめとするエンタメ文化がどのように生まれ、社会へ広まったのか。産業と文化の構造を深く紐解く。
+                        </p>
+                    </div>
+                    <div class="p-4 rounded-xl bg-white/[0.03] border border-white/10 space-y-2">
+                        <div class="text-xs font-mono text-cyan-400 uppercase tracking-wide">03 / AI-Driven Dev</div>
+                        <div class="font-semibold text-sm text-white">AI駆動開発の実践</div>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            学んだ幅広い知見を糧に、バイブコーディングでアイデアを即座に形にするアジャイルな個人開発を推進。
+                        </p>
+                    </div>
                 </div>
 
                 <!-- 経歴 (Timeline) -->
                 <div class="pt-6 border-t border-white/10 space-y-6">
                     <div class="flex items-center gap-2">
-                        <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Career & Timeline / 経歴</span>
+                        <span class="text-xs font-mono uppercase tracking-widest text-gray-400">Career & Timeline / 経歴と歩み</span>
                     </div>
 
                     <ol class="relative border-l border-white/15 ml-2.5 space-y-8 text-sm">
                         <li class="pl-6 relative">
                             <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/40 ring-4 ring-black"></span>
-                            <span class="text-xs font-mono text-gray-400 block mb-1">〜 2022.03</span>
-                            <div class="font-semibold text-base text-white">専門学校 卒業</div>
+                            <span class="text-xs font-mono text-gray-400 block mb-1">2020.04 〜 2022.03</span>
+                            <div class="font-semibold text-base text-white">専門学校 入学・卒業（情報処理専攻）</div>
                             <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
-                                卒業後の就職活動で思うような結果が出ず挫折を経験。先端技術への探究心から再挑戦と学び直しを決意。
+                                人工知能を学びたい想いを胸に入学。当時はAI発展初期にあったため情報処理を中心にITの基礎技術を習得。卒業後もAIに対する熱意は冷めることなく、独学と学び直しの機会を模索し続ける。
                             </p>
                         </li>
                         <li class="pl-6 relative">
                             <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white/80 ring-4 ring-black"></span>
                             <span class="text-xs font-mono text-gray-400 block mb-1">2025.04 〜 現在</span>
-                            <div class="font-semibold text-base text-white">ZEN大学 在学</div>
+                            <div class="font-semibold text-base text-white">ZEN大学 在学（人工知能 × デジタル産業）</div>
                             <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
-                                再び、学習意識
+                                1つの学科で多様な分野を横断できる点に惹かれ進学。人工知能の本格的な学修に加え、関心のあるアニメ等のエンターテインメント文化がどう生まれ広まったかを学ぶ「デジタル産業」の講義に注力。自らの将来像を明確にし、今後のキャリアに直結する知見を深める。
                             </p>
                         </li>
                         <li class="pl-6 relative">
                             <span class="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white ring-4 ring-black"></span>
                             <span class="text-xs font-mono text-emerald-400 block mb-1">Present</span>
-                            <div class="font-semibold text-base text-white">AI駆動開発（AI-Driven Dev）</div>
+                            <div class="font-semibold text-base text-white">AI駆動開発（バイブコーディングによるプロダクト開発）</div>
                             <p class="text-sm text-gray-400 mt-1.5 leading-relaxed">
-                                バイブコーディングでWEBサイトやアプリを開発
+                                身につけた知識やAIエージェントを駆使し、推し活サポートアプリやリアルタイムAI VTuberシステムなど、AIとエンタメを掛け合わせた実践的なWeb・アプリ開発に日々邁進中。
                             </p>
                         </li>
                     </ol>
@@ -141,7 +170,7 @@
                             推しサポ（アプリ版）
                         </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            日々の推し活をもっと楽しく・便利にするスマホアプリです。Web版の反響を見ながら順次リリースしていく予定です。
+                            アニメやエンタメ文化を支えるファンの「推し活」をより楽しく・便利にサポートするスマートフォンアプリ。ファンコミュニティの熱量に寄り添う設計を追求しています。
                         </p>
                     </div>
                     <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
@@ -159,7 +188,7 @@
                             推しサポ Web版（PWA）
                         </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            ブラウザから手軽に使える推しサポのWeb（PWA）版です。インストール不要ですぐに使えるよう現在準備を進めています。
+                            ブラウザから手軽に利用できる推しサポのWeb（PWA）版。インストール不要で端末を選ばず軽快に動作する体験を目指して開発を進めています。
                         </p>
                     </div>
                     <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
@@ -178,7 +207,7 @@
                             AI VTuber システム
                         </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            YouTube配信のコメントやOBSと連動して、リアルタイムにおしゃべりするAIキャラクターシステム（テストたん）です。
+                            人工知能とエンターテインメントの融合。YouTube配信のコメントやOBSとリアルタイムに連動し、インタラクティブにおしゃべりするAIキャラクター（テストたん）システムです。
                         </p>
                     </div>
                     <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
@@ -197,7 +226,7 @@
                             ポートフォリオサイト
                         </h3>
                         <p class="text-sm text-gray-300 leading-relaxed font-normal">
-                            これまでの制作物やプロフィールをまとめたポートフォリオです。このサイト自体も、全体の構成からThree.jsのアニメーション実装まで、すべて agy とペアプロしながら作り上げました。
+                            自身の歩みと制作物を集約したポートフォリオ。AI駆動開発の実践として、agyとペアプログラミングを行いながら、Three.jsによる深宇宙3D演出を含めゼロから構築しました。
                         </p>
                     </div>
                     <div class="pt-6 flex flex-wrap gap-2 text-xs font-mono text-gray-300">
