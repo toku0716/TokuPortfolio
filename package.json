@@ -1,0 +1,9 @@
+{
+  "name": "toku-portfolio",
+  "version": "1.0.0",
+  "description": "Toku's Portfolio Website",
+  "scripts": {
+    "watch": "node auto-push.js",
+    "push": "git add . && git commit -m \"update: quick push\" && git push"
+  }
+}
